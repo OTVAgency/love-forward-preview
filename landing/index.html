@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Love Forward Foundation — Families Serve Sentences Too™</title>
+<meta name="description" content="Supporting families as they walk through incarceration, reentry, and healing — with love that moves forward." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --red: #FE1F11;
+    --cream: #FBF0E8;
+    --black: #000000;
+    --white: #FFFFFF;
+    --muted: #444444;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--black);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a { color: var(--red); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap {
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+  /* Hero */
+  .hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3.5rem 0 2.5rem;
+    min-height: 70vh;
+  }
+  .logo {
+    width: min(220px, 55vw);
+    height: auto;
+    margin-bottom: 1.75rem;
+  }
+  .org {
+    font-size: clamp(1.35rem, 4.5vw, 1.75rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.65rem;
+  }
+  .tagline {
+    font-size: clamp(1.05rem, 3.5vw, 1.25rem);
+    font-weight: 600;
+    color: var(--red);
+    letter-spacing: -0.01em;
+    margin-bottom: 1.5rem;
+  }
+  .mission {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 28rem;
+    margin: 0 auto 2rem;
+    font-weight: 400;
+  }
+  .ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn {
+    display: inline-block;
+    appearance: none;
+    border: none;
+    background: var(--black);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.85rem 1.5rem;
+    border-radius: 999px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .btn:hover { background: #222; text-decoration: none; color: var(--white); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--black);
+    border: 1.5px solid var(--black);
+  }
+  .btn-secondary:hover { background: var(--black); color: var(--white); }
+  .site-note {
+    margin-top: 1.25rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .site-note a { color: var(--muted); text-decoration: underline; }
+  /* Footer */
+  footer {
+    border-top: 2px solid rgba(254, 31, 17, 0.35);
+    padding: 1.75rem 0 2rem;
+    text-align: center;
+  }
+  footer .logo-sm {
+    width: 72px;
+    height: auto;
+    margin: 0 auto 1rem;
+    display: block;
+    opacity: 0.9;
+  }
+  .contact {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .contact strong {
+    color: var(--black);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .contact a { color: var(--muted); }
+  .contact a:hover { color: var(--red); }
+</style>
+</head>
+<body>
+  <main class="wrap hero">
+    <img class="logo" src="assets/logo.png" alt="Love Forward Foundation logo" width="220" height="186" />
+    <h1 class="org">Love Forward Foundation</h1>
+    <p class="tagline">Families Serve Sentences Too™</p>
+    <p class="mission">Supporting families as they walk through incarceration, reentry, and healing — with love that moves forward.</p>
+    <div class="ctas">
+      <a class="btn" href="mailto:info@loveforwardfoundation.org">Get in touch</a>
+      <a class="btn btn-secondary" href="tel:+15402525291">Call 540-252-5291</a>
+    </div>
+    <p class="site-note">Preview page · existing site: <a href="https://loveforwardfoundation.org" rel="noopener noreferrer">loveforwardfoundation.org</a></p>
+  </main>
+  <footer>
+    <div class="wrap">
+      <img class="logo-sm" src="assets/logo.png" alt="" width="72" height="61" aria-hidden="true" />
+      <div class="contact">
+        <strong>Love Forward Foundation</strong>
+        <a href="mailto:info@loveforwardfoundation.org">info@loveforwardfoundation.org</a><br />
+        <a href="tel:+15402525291">540-252-5291</a><br />
+        @tloveff
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
