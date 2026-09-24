@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pick a business card — Love Forward Foundation</title>
+<style>
+  :root { --cream:#FBF0E8; --red:#FE1F11; --black:#000; --gray:#444; --white:#fff; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; background:var(--cream); color:var(--black); line-height:1.35; padding:20px 16px 48px; }
+  .wrap { max-width:1100px; margin:0 auto; }
+  header { display:flex; align-items:center; gap:14px; margin-bottom:18px; padding-bottom:14px; border-bottom:3px solid var(--red); }
+  header img { height:48px; width:auto; }
+  header h1 { font-size:clamp(1.35rem,3.5vw,1.85rem); font-weight:800; letter-spacing:-0.02em; }
+  header p { font-size:0.95rem; color:var(--gray); margin-top:2px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  @media (max-width:820px){ .grid{ grid-template-columns:1fr; } }
+  .option { background:var(--white); border:2px solid #e5d5c8; border-radius:14px; padding:16px; display:flex; flex-direction:column; gap:12px; transition:border-color .15s, box-shadow .15s; }
+  .option.selected { border-color:var(--red); box-shadow:0 0 0 3px rgba(254,31,17,.18); }
+  .option h2 { font-size:1.2rem; font-weight:800; }
+  .badge { display:inline-block; background:var(--red); color:var(--white); font-size:.72rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:3px 8px; border-radius:999px; margin-right:6px; vertical-align:middle; }
+  .diff { font-size:.95rem; color:var(--gray); margin-top:-4px; }
+  .side-label { font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--gray); margin-bottom:4px; }
+  .mock { width:100%; height:auto; border-radius:8px; border:1px solid #ddd; background:var(--cream); display:block; }
+  .pair { display:flex; flex-direction:column; gap:10px; }
+  button.pick { appearance:none; border:none; background:var(--black); color:var(--white); font-size:1rem; font-weight:700; padding:12px 16px; border-radius:10px; cursor:pointer; margin-top:4px; }
+  button.pick:hover { background:#222; }
+  .option.selected button.pick { background:var(--red); }
+  .note { display:none; margin-top:4px; padding:10px 12px; background:#fff5f3; border-left:4px solid var(--red); border-radius:6px; font-size:.95rem; }
+  .note.show { display:block; }
+  .note a { color:var(--red); font-weight:700; }
+  footer { margin-top:22px; font-size:.85rem; color:var(--gray); text-align:center; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="assets/logo.png" alt="Love Forward" />
+      <div>
+        <h1>Pick a business card</h1>
+        <p>Love Forward Foundation · two options for Keisha</p>
+      </div>
+    </header>
+    <div class="grid">
+      <section class="option" id="optA">
+        <h2><span class="badge">Option A</span> QR on back</h2>
+        <p class="diff">Clean logo-forward front; contact + QR on the back.</p>
+        <div class="pair">
+          <div><div class="side-label">Front</div><img class="mock" src="assets/option-a-front.png" alt="Option A front" /></div>
+          <div><div class="side-label">Back</div><img class="mock" src="assets/option-a-back.png" alt="Option A back" /></div>
+        </div>
+        <button class="pick" type="button" onclick="prefer('A')">I prefer A</button>
+        <div class="note" id="noteA">Tell Cory you prefer Option A — <a href="mailto:cory@otv.agency?subject=Love%20Forward%20card%20pick&body=I%20prefer%20Option%20A">email Cory</a></div>
+      </section>
+      <section class="option" id="optB">
+        <h2><span class="badge">Option B</span> QR on front</h2>
+        <p class="diff">QR beside the name on front; full contact + small logo on back.</p>
+        <div class="pair">
+          <div><div class="side-label">Front</div><img class="mock" src="assets/option-b-front.png" alt="Option B front" /></div>
+          <div><div class="side-label">Back</div><img class="mock" src="assets/option-b-back.png" alt="Option B back" /></div>
+        </div>
+        <button class="pick" type="button" onclick="prefer('B')">I prefer B</button>
+        <div class="note" id="noteB">Tell Cory you prefer Option B — <a href="mailto:cory@otv.agency?subject=Love%20Forward%20card%20pick&body=I%20prefer%20Option%20B">email Cory</a></div>
+      </section>
+    </div>
+    <footer>Love Forward Foundation · cream / red / black · print held</footer>
+  </div>
+<script>
+function prefer(which){
+  document.querySelectorAll('.option').forEach(el=>el.classList.remove('selected'));
+  document.querySelectorAll('.note').forEach(el=>el.classList.remove('show'));
+  document.getElementById('opt'+which).classList.add('selected');
+  document.getElementById('note'+which).classList.add('show');
+}
+</script>
+</body>
+</html>
