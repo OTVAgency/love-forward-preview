@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Love Forward Foundation — Families Serve Sentences Too™</title>
-<meta name="description" content="Supporting families as they walk through incarceration, reentry, and healing — with love that moves forward." />
+<meta name="description" content="A statewide movement supporting caregivers, youth, and adult children living the shared sentence of incarceration." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
@@ -15,6 +15,7 @@
     --black: #000000;
     --white: #FFFFFF;
     --muted: #444444;
+    --soft: #EFE4DB;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -22,54 +23,67 @@
     font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     background: var(--cream);
     color: var(--black);
-    line-height: 1.5;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    line-height: 1.55;
   }
   a { color: var(--red); text-decoration: none; }
   a:hover { text-decoration: underline; }
   .wrap {
     width: 100%;
-    max-width: 40rem;
+    max-width: 44rem;
     margin: 0 auto;
     padding: 0 1.25rem;
   }
+  .wrap-wide {
+    width: 100%;
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+  .preview-banner {
+    background: var(--black);
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.55rem 1rem;
+  }
+  .preview-banner a { color: #ffc9c4; }
   /* Hero */
   .hero {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    padding: 3.5rem 0 2.5rem;
-    min-height: 70vh;
+    padding: 3rem 0 2.75rem;
   }
   .logo {
-    width: min(220px, 55vw);
+    width: min(200px, 48vw);
     height: auto;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
   }
   .org {
-    font-size: clamp(1.35rem, 4.5vw, 1.75rem);
+    font-size: clamp(1.4rem, 4.5vw, 1.85rem);
     font-weight: 700;
     letter-spacing: -0.02em;
-    margin-bottom: 0.65rem;
+    margin-bottom: 0.5rem;
   }
   .tagline {
-    font-size: clamp(1.05rem, 3.5vw, 1.25rem);
+    font-size: clamp(1.1rem, 3.5vw, 1.35rem);
     font-weight: 600;
     color: var(--red);
     letter-spacing: -0.01em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.65rem;
+  }
+  .subtag {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.35rem;
   }
   .mission {
     font-size: 1.05rem;
     color: var(--muted);
-    max-width: 28rem;
-    margin: 0 auto 2rem;
-    font-weight: 400;
+    max-width: 34rem;
+    margin: 0 auto 1.75rem;
   }
   .ctas {
     display: flex;
@@ -80,16 +94,14 @@
   }
   .btn {
     display: inline-block;
-    appearance: none;
     border: none;
     background: var(--black);
     color: var(--white);
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    padding: 0.85rem 1.5rem;
+    padding: 0.8rem 1.35rem;
     border-radius: 999px;
-    cursor: pointer;
     text-decoration: none;
     transition: background 0.15s ease;
   }
@@ -100,16 +112,155 @@
     border: 1.5px solid var(--black);
   }
   .btn-secondary:hover { background: var(--black); color: var(--white); }
-  .site-note {
-    margin-top: 1.25rem;
-    font-size: 0.85rem;
+  .btn-ghost {
+    background: transparent;
+    color: var(--muted);
+    border: 1.5px solid transparent;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    padding: 0.5rem 0.75rem;
+  }
+  .btn-ghost:hover { color: var(--red); background: transparent; }
+  /* Sections */
+  section {
+    padding: 2.5rem 0;
+  }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    font-size: clamp(1.35rem, 3.5vw, 1.65rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.85rem;
+  }
+  .lede {
+    color: var(--muted);
+    font-size: 1.02rem;
+    max-width: 38rem;
+    margin-bottom: 1.5rem;
+  }
+  .band {
+    background: var(--white);
+    border-top: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .band-soft { background: var(--soft); }
+  .band-dark {
+    background: var(--black);
+    color: var(--white);
+  }
+  .band-dark .section-label { color: #ff8a7f; }
+  .band-dark .lede, .band-dark p { color: rgba(255,255,255,0.82); }
+  .band-dark a { color: #ffc9c4; }
+  /* Cards */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  @media (min-width: 640px) {
+    .card-grid.three { grid-template-columns: repeat(3, 1fr); }
+    .card-grid.two { grid-template-columns: repeat(2, 1fr); }
+  }
+  .card {
+    background: var(--white);
+    border-radius: 1rem;
+    padding: 1.25rem 1.2rem;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+  .band .card { background: var(--cream); }
+  .band-soft .card { background: var(--white); }
+  .card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.45rem;
+  }
+  .card p {
+    font-size: 0.95rem;
     color: var(--muted);
   }
-  .site-note a { color: var(--muted); text-decoration: underline; }
+  .card-accent {
+    border-left: 4px solid var(--red);
+  }
+  /* Values */
+  .values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+  .chip {
+    display: inline-block;
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 999px;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .band-soft .chip { background: var(--cream); }
+  /* Credibility */
+  .cred {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  @media (min-width: 560px) {
+    .cred { grid-template-columns: repeat(3, 1fr); }
+  }
+  .cred-item {
+    text-align: center;
+    padding: 1rem 0.75rem;
+  }
+  .cred-item strong {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  .cred-item span {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  /* Press */
+  .press-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+  .press-list a {
+    display: block;
+    background: var(--white);
+    border-radius: 0.75rem;
+    padding: 0.9rem 1.1rem;
+    color: var(--black);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid rgba(0,0,0,0.06);
+    text-decoration: none;
+  }
+  .press-list a:hover { border-color: var(--red); color: var(--red); }
+  .press-list .outlet {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.2rem;
+  }
   /* Footer */
   footer {
     border-top: 2px solid rgba(254, 31, 17, 0.35);
-    padding: 1.75rem 0 2rem;
+    padding: 2rem 0 2.5rem;
     text-align: center;
   }
   footer .logo-sm {
@@ -122,30 +273,193 @@
   .contact {
     font-size: 0.9rem;
     color: var(--muted);
-    line-height: 1.7;
+    line-height: 1.75;
   }
   .contact strong {
     color: var(--black);
     font-weight: 600;
     display: block;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.3rem;
   }
   .contact a { color: var(--muted); }
   .contact a:hover { color: var(--red); }
+  .ein {
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: #777;
+  }
+  .back-cards {
+    margin-top: 1.25rem;
+    font-size: 0.85rem;
+  }
 </style>
 </head>
 <body>
-  <main class="wrap hero">
-    <img class="logo" src="assets/logo.png" alt="Love Forward Foundation logo" width="220" height="186" />
+  <div class="preview-banner">
+    OTV preview only · not live · existing site:
+    <a href="https://loveforwardfoundation.org" rel="noopener noreferrer">loveforwardfoundation.org</a>
+  </div>
+
+  <header class="wrap hero">
+    <img class="logo" src="assets/logo.png" alt="Love Forward Foundation logo" width="200" height="169" />
     <h1 class="org">Love Forward Foundation</h1>
     <p class="tagline">Families Serve Sentences Too™</p>
-    <p class="mission">Supporting families as they walk through incarceration, reentry, and healing — with love that moves forward.</p>
+    <p class="subtag">Stop Stigma · Create Change · Love Forward</p>
+    <p class="mission">A statewide movement supporting caregivers, youth, and adult children living the shared sentence of incarceration — with dignity, belonging, and love that moves forward.</p>
     <div class="ctas">
       <a class="btn" href="mailto:info@loveforwardfoundation.org">Get in touch</a>
       <a class="btn btn-secondary" href="tel:+15402525291">Call 540-252-5291</a>
+      <a class="btn-ghost" href="#project-seen">See Project SEEN</a>
     </div>
-    <p class="site-note">Preview page · existing site: <a href="https://loveforwardfoundation.org" rel="noopener noreferrer">loveforwardfoundation.org</a></p>
-  </main>
+  </header>
+
+  <section class="band">
+    <div class="wrap-wide">
+      <p class="section-label">What we do</p>
+      <h2>Three pillars. One movement.</h2>
+      <p class="lede">From the foundation’s brochure and community work: advocacy that makes families visible, connection that ends isolation, and ecosystems that include the people serving the sentence on the outside.</p>
+      <div class="card-grid three">
+        <article class="card card-accent">
+          <h3>Advocacy &amp; Awareness</h3>
+          <p>Raise statewide awareness of the shared sentence and protect the stories of justice-impacted families — especially in rural communities.</p>
+        </article>
+        <article class="card card-accent">
+          <h3>Connection &amp; Support</h3>
+          <p>Weekly workshops, creative coping rituals, and pathways that help caregivers, youth, and adult children feel seen, supported, and less alone.</p>
+        </article>
+        <article class="card card-accent">
+          <h3>Ecosystem Building</h3>
+          <p>Strengthen reentry and community care by including families — building relationships, resources, and sanctuaries that did not exist before.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-dark" id="project-seen">
+    <div class="wrap">
+      <p class="section-label">Featured initiative</p>
+      <h2>Project SEEN</h2>
+      <p class="lede" style="margin-bottom:1rem;"><strong style="color:#fff;">Seeing the Needs of Children and Caregivers Impacted by Parental Incarceration.</strong></p>
+      <p style="margin-bottom:1rem;">When a parent is incarcerated, families serve the sentence too. Through Project SEEN, Love Forward is building stronger pathways to identify, support, and connect these families to resources, relationships, and opportunities.</p>
+      <p style="margin-bottom:1.25rem;">Supported by the Waynesboro Kiwanis Club. Because families serving a shared sentence deserve to be seen.</p>
+      <a class="btn" href="mailto:info@loveforwardfoundation.org?subject=Project%20SEEN" style="background:var(--red);">Ask about Project SEEN</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="section-label">About</p>
+      <h2>Founded in lived experience</h2>
+      <p class="lede">Love Forward Foundation is a justice-rooted nonprofit serving the Shenandoah Valley and Virginia statewide. The work centers healing-centered curriculum, creative coping, community rituals, and digital storytelling so emotional truth is honored — not hidden.</p>
+      <div class="card card-accent" style="background:var(--white);">
+        <h3>Keisha Nicholson</h3>
+        <p style="margin-bottom:0.65rem;"><strong>Founder &amp; Executive Director</strong></p>
+        <p>Keisha’s leadership is rooted in the lived experience of parental incarceration. Early work began with pen pals and care packages during visitation, grew into creative workshops and a brick-and-mortar Creative Haven in downtown Staunton, and continues as a family-focused, caregiver-centered movement — including outreach in schools, facilities, and community events. Her aim, as she has put it: foster resilience through self-reliance.</p>
+      </div>
+      <div class="cred" style="margin-top:1.5rem;">
+        <div class="cred-item">
+          <strong>Since ~2015</strong>
+          <span>Grassroots family support</span>
+        </div>
+        <div class="cred-item">
+          <strong>501(c)(3) · 2017</strong>
+          <span>Nonprofit founding celebration Apr 5</span>
+        </div>
+        <div class="cred-item">
+          <strong>Virginia-wide</strong>
+          <span>Shenandoah Valley roots</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-soft">
+    <div class="wrap-wide">
+      <p class="section-label">Programs &amp; gathering spaces</p>
+      <h2>How families show up with us</h2>
+      <p class="lede">Creative coping, ritual practice, and community celebration — meeting people where they are. (Street address held until confirmed; recent press also notes a mobile-unit direction.)</p>
+      <div class="card-grid two">
+        <article class="card">
+          <h3>Creative Haven</h3>
+          <p>A creative-coping space for youth and caregivers — art, hair, writing, candles, jewelry, music, and more — with workshops that often end in a youth market where young people sell what they made.</p>
+        </article>
+        <article class="card">
+          <h3>Rituals &amp; Ritual Guide</h3>
+          <p>Mind, body, and spiritual practices already on the live site: Pick a Truth, Write + Release, Ground with a Heart, Tie a Thread — plus a Ritual Playlist for soft resets.</p>
+        </article>
+        <article class="card">
+          <h3>Community events</h3>
+          <p>Examples from recent years: Create &amp; Skate with the Augusta County library, Comm(UNITY) Kickback at Creative Haven, school and facility talks, and community awareness partnerships.</p>
+        </article>
+        <article class="card">
+          <h3>Family Support Resources</h3>
+          <p>A dedicated hub for families walking incarceration and reentry — marked Coming Soon on the live site, with Project SEEN strengthening pathways to get connected.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="section-label">Values</p>
+      <h2>What we hold</h2>
+      <div class="values">
+        <span class="chip">Visibility</span>
+        <span class="chip">Dignity</span>
+        <span class="chip">Connection</span>
+        <span class="chip">Community Care</span>
+        <span class="chip">Lived Experience Leadership</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="section-label">As seen in</p>
+      <h2>Press &amp; community spotlight</h2>
+      <ul class="press-list">
+        <li>
+          <a href="https://www.wmra.org/2025-09-23/staunton-group-supports-families-of-incarcerated-with-love-forward" rel="noopener noreferrer" target="_blank">
+            <span class="outlet">WMRA</span>
+            Staunton group supports families of the incarcerated with Love Forward
+          </a>
+        </li>
+        <li>
+          <a href="https://www.newsleader.com/story/news/local/2025/01/08/newsmaker-2024-keisha-nicholson-and-the-love-forward-foundation/77066731007/" rel="noopener noreferrer" target="_blank">
+            <span class="outlet">News Leader</span>
+            Newsmaker 2024: Keisha Nicholson and the Love Forward Foundation
+          </a>
+        </li>
+        <li>
+          <a href="https://www.whsv.com/2024/08/02/love-forward-foundation-host-creative-haven-workshops-at-risk-youth/" rel="noopener noreferrer" target="_blank">
+            <span class="outlet">WHSV</span>
+            Creative Haven workshops for at-risk youth
+          </a>
+        </li>
+        <li>
+          <a href="https://www.whsv.com/2025/04/17/love-forward-foundation-host-community-event-celebrating-10-years-impact/" rel="noopener noreferrer" target="_blank">
+            <span class="outlet">WHSV</span>
+            Comm(UNITY) Kickback — celebrating years of impact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band-soft">
+    <div class="wrap" style="text-align:center;">
+      <p class="section-label">Join the movement</p>
+      <h2>Stay connected</h2>
+      <p class="lede" style="margin-left:auto;margin-right:auto;">Share time, skills, or lived experience. Collaborate on statewide advocacy. Help families get connected. Follow the work at @tloveff.</p>
+      <div class="ctas">
+        <a class="btn" href="mailto:info@loveforwardfoundation.org">Email the foundation</a>
+        <a class="btn btn-secondary" href="https://www.facebook.com/tloveff" rel="noopener noreferrer" target="_blank">Facebook</a>
+        <a class="btn btn-secondary" href="https://www.instagram.com/tloveff/" rel="noopener noreferrer" target="_blank">Instagram</a>
+        <a class="btn-ghost" href="https://loveforwardfoundation.org" rel="noopener noreferrer" target="_blank">Visit live site</a>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <div class="wrap">
       <img class="logo-sm" src="assets/logo.png" alt="" width="72" height="61" aria-hidden="true" />
@@ -153,8 +467,12 @@
         <strong>Love Forward Foundation</strong>
         <a href="mailto:info@loveforwardfoundation.org">info@loveforwardfoundation.org</a><br />
         <a href="tel:+15402525291">540-252-5291</a><br />
-        @tloveff
+        <a href="https://www.facebook.com/tloveff" rel="noopener noreferrer" target="_blank">Facebook @tloveff</a>
+        ·
+        <a href="https://www.instagram.com/tloveff/" rel="noopener noreferrer" target="_blank">Instagram @tloveff</a>
+        <p class="ein">EIN 81-5320312 · © 2026 Love Forward Foundation</p>
       </div>
+      <p class="back-cards"><a href="../">← Card mockup picker</a></p>
     </div>
   </footer>
 </body>
