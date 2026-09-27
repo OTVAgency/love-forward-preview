@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Love Forward Foundation — Media Kit 2026 (DRAFT)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700;800&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --red: #E82624;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray: #808080;
+    --soft: #F5F5F5;
+    --ink: #1a1a1a;
+    --page-max: 920px;
+    --page-pad: clamp(28px, 5vw, 56px);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Open Sans", system-ui, sans-serif;
+    color: var(--ink);
+    background: #e8e8e8;
+    line-height: 1.55;
+    font-size: 16px;
+  }
+  h1, h2, h3, h4, .display {
+    font-family: "League Spartan", system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  a { color: var(--red); font-weight: 600; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  img { max-width: 100%; height: auto; display: block; }
+
+  /* DRAFT banner — sticky */
+  .draft-banner {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--black); color: var(--white);
+    text-align: center; padding: 10px 16px;
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .draft-banner span { color: var(--red); }
+  .draft-banner .sub {
+    display: block; font-family: "Open Sans", sans-serif;
+    font-size: 0.72rem; font-weight: 400; letter-spacing: 0.02em;
+    text-transform: none; color: #ccc; margin-top: 2px;
+  }
+
+  /* Top nav */
+  .kit-nav {
+    position: sticky; top: 52px; z-index: 90;
+    background: var(--white); border-bottom: 2px solid var(--black);
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+  }
+  .kit-nav-inner {
+    max-width: var(--page-max); margin: 0 auto;
+    display: flex; gap: 4px; padding: 8px 12px;
+    white-space: nowrap;
+  }
+  .kit-nav a {
+    color: var(--black); font-family: "League Spartan", sans-serif;
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
+    text-transform: uppercase; padding: 8px 10px; border-radius: 6px;
+    text-decoration: none;
+  }
+  .kit-nav a:hover { background: var(--soft); text-decoration: none; color: var(--red); }
+
+  .kit-wrap { max-width: var(--page-max); margin: 24px auto 64px; padding: 0 12px; }
+
+  /* Page panels — letter-ish rhythm */
+  .page {
+    background: var(--white);
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 28px rgba(0,0,0,.08);
+    min-height: min(100vh, 1100px);
+    display: flex; flex-direction: column;
+    scroll-margin-top: 110px;
+  }
+  .page-inner { padding: var(--page-pad); flex: 1; display: flex; flex-direction: column; }
+  .page-footer {
+    margin-top: auto; padding-top: 24px;
+    border-top: 1px solid #e5e5e5;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.72rem; color: var(--gray);
+    font-family: "League Spartan", sans-serif;
+    letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .page-footer .red { color: var(--red); }
+
+  .kicker {
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--red); margin-bottom: 10px;
+  }
+  .page-title { font-size: clamp(1.85rem, 4vw, 2.6rem); margin-bottom: 8px; }
+  .page-sub { color: var(--gray); font-size: 1.05rem; margin-bottom: 28px; max-width: 42rem; }
+
+  /* Cover */
+  .cover {
+    background: var(--black); color: var(--white);
+    min-height: min(100vh, 1100px);
+    position: relative; overflow: hidden;
+  }
+  .cover .page-inner { position: relative; z-index: 2; }
+  .cover-bar {
+    height: 6px; background: var(--red); width: 100%;
+  }
+  .cover-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 40px;
+  }
+  .cover-year {
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.85rem; letter-spacing: 0.2em; color: #aaa;
+  }
+  .cover-logo {
+    width: min(280px, 70vw); margin: 24px auto 20px;
+  }
+  .cover-logo img { width: 100%; filter: drop-shadow(0 4px 20px rgba(0,0,0,.4)); }
+  .cover h1 {
+    text-align: center; font-size: clamp(2.2rem, 6vw, 3.4rem);
+    color: var(--white); margin: 12px 0 8px;
+  }
+  .cover .tagline {
+    text-align: center;
+    font-family: "League Spartan", sans-serif;
+    font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+    font-weight: 600; letter-spacing: 0.06em;
+    color: var(--red); margin-bottom: 8px;
+  }
+  .cover .doc-label {
+    text-align: center; color: #bbb; font-size: 0.95rem; margin-bottom: 36px;
+  }
+  .cover-hero {
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px;
+    align-items: stretch; margin-top: auto;
+  }
+  @media (max-width: 720px) {
+    .cover-hero { grid-template-columns: 1fr; }
+  }
+  .cover-photo {
+    border-radius: 12px; overflow: hidden;
+    aspect-ratio: 4/5; max-height: 420px;
+    background: #222;
+  }
+  .cover-photo img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center top;
+  }
+  .cover-panel {
+    background: #111; border: 1px solid #333; border-radius: 12px;
+    padding: 24px; display: flex; flex-direction: column; justify-content: center;
+  }
+  .cover-panel h2 {
+    font-size: 1.35rem; margin-bottom: 12px; color: var(--white);
+  }
+  .cover-panel p { color: #ccc; font-size: 0.95rem; margin-bottom: 16px; }
+  .cover-panel .meta {
+    font-size: 0.8rem; color: #888; border-top: 1px solid #333;
+    padding-top: 14px; margin-top: 8px;
+  }
+  .btn {
+    display: inline-block; background: var(--red); color: var(--white) !important;
+    font-family: "League Spartan", sans-serif; font-weight: 700;
+    font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 12px 20px; border-radius: 8px; text-decoration: none !important;
+  }
+  .btn:hover { background: #c51f1d; }
+  .btn-outline {
+    background: transparent; border: 2px solid var(--white);
+    color: var(--white) !important;
+  }
+  .btn-outline:hover { border-color: var(--red); color: var(--red) !important; }
+
+  /* Grids & cards */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  @media (max-width: 720px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .grid-5 { grid-template-columns: 1fr 1fr; }
+  }
+  .card {
+    background: var(--soft); border-radius: 12px; padding: 20px;
+    border-left: 4px solid var(--red);
+  }
+  .card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+  .card p { font-size: 0.92rem; color: #333; }
+  .card.dark {
+    background: var(--black); color: var(--white); border-left-color: var(--red);
+  }
+  .card.dark p { color: #ccc; }
+
+  .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+  .pill {
+    background: var(--black); color: var(--white);
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 8px 14px; border-radius: 999px;
+  }
+  .pill.red { background: var(--red); }
+  .pill.outline {
+    background: transparent; color: var(--black);
+    border: 2px solid var(--black);
+  }
+
+  .photo-frame {
+    border-radius: 12px; overflow: hidden; background: #eee;
+  }
+  .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+  .photo-cap {
+    font-size: 0.78rem; color: var(--gray); margin-top: 8px;
+  }
+
+  .values-list {
+    list-style: none; display: grid; gap: 10px; margin: 16px 0;
+  }
+  .values-list li {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 12px 14px; background: var(--soft); border-radius: 8px;
+  }
+  .values-list .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--red); margin-top: 6px; flex-shrink: 0;
+  }
+
+  /* Swatches */
+  .swatches { display: flex; flex-wrap: wrap; gap: 16px; margin: 20px 0; }
+  .swatch {
+    width: 110px; text-align: center;
+  }
+  .swatch .chip {
+    width: 110px; height: 110px; border-radius: 50%;
+    margin-bottom: 8px; border: 2px solid #ddd;
+  }
+  .swatch .hex {
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em;
+  }
+  .swatch .label { font-size: 0.75rem; color: var(--gray); }
+
+  .logo-row {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    margin: 20px 0;
+  }
+  @media (max-width: 720px) { .logo-row { grid-template-columns: 1fr; } }
+  .logo-tile {
+    background: var(--soft); border-radius: 12px; padding: 24px;
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+    min-height: 180px; justify-content: center;
+  }
+  .logo-tile.dark { background: var(--black); }
+  .logo-tile img { max-height: 120px; width: auto; }
+  .logo-tile .cap { font-size: 0.75rem; color: var(--gray); text-align: center; }
+  .logo-tile.dark .cap { color: #aaa; }
+
+  .press-list { list-style: none; display: grid; gap: 12px; }
+  .press-list li {
+    padding: 14px 16px; border: 1px solid #e0e0e0; border-radius: 10px;
+    display: grid; gap: 4px;
+  }
+  .press-list .outlet {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700; font-size: 0.95rem;
+  }
+  .press-list .desc { font-size: 0.88rem; color: #444; }
+  .press-list .when { font-size: 0.75rem; color: var(--gray); }
+
+  .contact-stack {
+    background: var(--black); color: var(--white);
+    border-radius: 14px; padding: 28px; margin-top: 12px;
+  }
+  .contact-stack h3 { color: var(--white); margin-bottom: 16px; font-size: 1.3rem; }
+  .contact-stack a { color: var(--white); }
+  .contact-stack a:hover { color: var(--red); }
+  .contact-line {
+    display: flex; gap: 12px; padding: 8px 0;
+    border-bottom: 1px solid #333; font-size: 0.95rem;
+  }
+  .contact-line:last-child { border-bottom: none; }
+  .contact-line .lbl {
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--red); min-width: 72px; padding-top: 3px;
+  }
+
+  .note-box {
+    background: #fff8f7; border: 1px dashed var(--red);
+    border-radius: 10px; padding: 14px 16px;
+    font-size: 0.85rem; color: #555; margin-top: 20px;
+  }
+  .note-box strong { color: var(--red); }
+
+  .split-photo {
+    display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 24px;
+    align-items: start;
+  }
+  @media (max-width: 720px) { .split-photo { grid-template-columns: 1fr; } }
+
+  .toc-list { list-style: none; display: grid; gap: 8px; margin: 8px 0 24px; }
+  .toc-list a {
+    display: flex; align-items: baseline; gap: 14px;
+    padding: 14px 16px; background: var(--soft); border-radius: 10px;
+    color: var(--black); text-decoration: none;
+    font-family: "League Spartan", sans-serif; font-weight: 600;
+    transition: background .15s;
+  }
+  .toc-list a:hover { background: #ececec; text-decoration: none; }
+  .toc-list .num {
+    color: var(--red); font-size: 1.1rem; min-width: 28px;
+  }
+  .toc-list .desc {
+    font-family: "Open Sans", sans-serif; font-weight: 400;
+    font-size: 0.85rem; color: var(--gray); margin-left: auto;
+  }
+  @media (max-width: 600px) {
+    .toc-list .desc { display: none; }
+  }
+
+  .quote-mark {
+    font-family: "League Spartan", sans-serif;
+    font-size: 3rem; color: var(--red); line-height: 1; margin-bottom: 4px;
+  }
+  blockquote.pull {
+    font-size: 1.15rem; font-style: italic; color: #222;
+    max-width: 36rem; margin: 12px 0 8px;
+  }
+  blockquote.pull cite {
+    display: block; font-style: normal; font-size: 0.8rem;
+    color: var(--gray); margin-top: 10px;
+    font-family: "League Spartan", sans-serif;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="draft-banner">
+  <span>DRAFT</span> — For Cory review · Not client-sent · Not live on loveforwardfoundation.org
+  <span class="sub">Love Forward Foundation Media Kit 2026 · OTV Agency preview · Hold print / email / org publish</span>
+</div>
+
+<nav class="kit-nav" aria-label="Media kit sections">
+  <div class="kit-nav-inner">
+    <a href="#cover">Cover</a>
+    <a href="#contents">Contents</a>
+    <a href="#about">About</a>
+    <a href="#founder">Founder</a>
+    <a href="#programs">Programs</a>
+    <a href="#audience">Audience</a>
+    <a href="#brand">Brand</a>
+    <a href="#press">Press</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="kit-wrap">
+
+  <!-- ========== 01 COVER ========== -->
+  <section class="page cover" id="cover">
+    <div class="cover-bar"></div>
+    <div class="page-inner">
+      <div class="cover-top">
+        <div class="cover-year">MEDIA KIT · 2026</div>
+        <div class="cover-year">DRAFT</div>
+      </div>
+      <div class="cover-logo">
+        <img src="assets/logo-circular.png" alt="Love Forward Foundation logo" />
+      </div>
+      <h1>Love Forward Foundation</h1>
+      <p class="tagline">STOP Stigma. CREATE Change. LOVE Forward.</p>
+      <p class="doc-label">Media Kit · Partnerships · Press · Speaking</p>
+
+      <div class="cover-hero">
+        <div class="cover-photo">
+          <img src="assets/hero-keisha-audience.jpg" alt="Keisha Nicholson speaking to an audience" />
+        </div>
+        <div class="cover-panel">
+          <h2>Families Serve Sentences Too™</h2>
+          <p>A statewide, dignity-centered movement supporting caregivers, youth, and adult children living the shared sentence of incarceration.</p>
+          <a class="btn" href="#contents">Explore the kit</a>
+          <div class="meta">
+            Keisha Nicholson · Founder &amp; Executive Director<br />
+            Shenandoah Valley / Virginia · Est. grassroots ~2015 · 501(c)(3) since 2017
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer" style="border-top-color:#333; color:#888;">
+        <span>Love Forward Foundation</span>
+        <span class="red">01 / Cover</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 02 CONTENTS ========== -->
+  <section class="page" id="contents">
+    <div class="page-inner">
+      <p class="kicker">Navigate</p>
+      <h2 class="page-title">Explore the kit</h2>
+      <p class="page-sub">Jump to any section. Built for press, partners, event hosts, and community collaborators reviewing Love Forward Foundation.</p>
+      <ul class="toc-list">
+        <li><a href="#about"><span class="num">02</span> About &amp; Mission <span class="desc">Who we are</span></a></li>
+        <li><a href="#founder"><span class="num">03</span> Founder <span class="desc">Keisha Nicholson</span></a></li>
+        <li><a href="#programs"><span class="num">04</span> Programs &amp; Impact <span class="desc">What we do</span></a></li>
+        <li><a href="#audience"><span class="num">05</span> Audience &amp; Personality <span class="desc">Who we serve</span></a></li>
+        <li><a href="#brand"><span class="num">06</span> Brand &amp; Visual <span class="desc">Palette · logos · photos</span></a></li>
+        <li><a href="#press"><span class="num">07</span> Press &amp; Partnerships <span class="desc">Collaborate with us</span></a></li>
+        <li><a href="#contact"><span class="num">08</span> Contact <span class="desc">Book · connect · follow</span></a></li>
+      </ul>
+      <div class="note-box">
+        <strong>Preview status:</strong> OTV draft for Cory review by Mon Sep 28 ET. Not emailed to Keisha. Not published on loveforwardfoundation.org. Facts drawn from brochure, brand board, enrichment notes, and client-supplied assets only — no invented metrics.
+      </div>
+      <div class="page-footer">
+        <span>Love Forward Foundation · 2026</span>
+        <span class="red">02 / Contents</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 03 ABOUT ========== -->
+  <section class="page" id="about">
+    <div class="page-inner">
+      <p class="kicker">Who we are</p>
+      <h2 class="page-title">About Love Forward</h2>
+      <p class="page-sub">A family-focused, caregiver-centered movement supporting families living the shared sentence of incarceration.</p>
+
+      <div class="split-photo">
+        <div>
+          <div class="photo-frame" style="aspect-ratio:4/5; max-height:480px;">
+            <img src="assets/community-neon.jpg" alt="Community group under LOVE FORWARD neon sign" style="height:100%; object-fit:cover;" />
+          </div>
+          <p class="photo-cap">Community gathering under the LOVE FORWARD neon — Creative Haven / event energy.</p>
+        </div>
+        <div>
+          <h3 style="font-size:1.35rem; margin-bottom:12px;">Mission</h3>
+          <p style="margin-bottom:16px;">A statewide movement supporting caregivers, youth, and adult children living the shared sentence of incarceration — centering dignity, belonging, and the lived experience of families carrying that sentence on the outside.</p>
+
+          <h3 style="font-size:1.15rem; margin:20px 0 10px;">Families Serve Sentences Too™</h3>
+          <p style="margin-bottom:16px; color:#333;">When a parent is incarcerated, families serve the sentence too. Love Forward builds pathways so those families are seen, supported, and connected to resources, relationships, and opportunities.</p>
+
+          <ul class="values-list">
+            <li><span class="dot"></span><div><strong>Visibility</strong> — families impacted by incarceration deserve to be seen</div></li>
+            <li><span class="dot"></span><div><strong>Dignity</strong> — healing-centered, trauma-informed care without stigma</div></li>
+            <li><span class="dot"></span><div><strong>Connection</strong> — community rituals, workshops, and support spaces</div></li>
+            <li><span class="dot"></span><div><strong>Community Care</strong> — ecosystem building across caregivers and partners</div></li>
+            <li><span class="dot"></span><div><strong>Lived Experience Leadership</strong> — led by those who know the journey</div></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span>Love Forward Foundation · 2026</span>
+        <span class="red">03 / About</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 04 FOUNDER ========== -->
+  <section class="page" id="founder">
+    <div class="page-inner">
+      <p class="kicker">Leadership</p>
+      <h2 class="page-title">Founder</h2>
+      <p class="page-sub">Keisha Nicholson — Founder &amp; Executive Director</p>
+
+      <div class="split-photo">
+        <div>
+          <div class="photo-frame" style="aspect-ratio:3/4; max-height:520px;">
+            <img src="assets/founder-podium.jpg" alt="Keisha Nicholson at the podium" style="height:100%; object-fit:cover; object-position:center top;" />
+          </div>
+          <p class="photo-cap">Speaking engagement — InsideOut Dads guest appearance.</p>
+        </div>
+        <div>
+          <h3 style="font-size:1.5rem; margin-bottom:4px;">Keisha Nicholson</h3>
+          <p style="color:var(--red); font-family:'League Spartan',sans-serif; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; font-size:0.85rem; margin-bottom:16px;">Founder &amp; Executive Director</p>
+
+          <p style="margin-bottom:14px;">Keisha founded Love Forward from lived experience of parental incarceration — early work rooted in pen-pal relationships and care packages during visitation years, growing into a justice-rooted nonprofit serving the Shenandoah Valley and Virginia families.</p>
+          <p style="margin-bottom:14px;">A movement architect, impacted artist, and narrative strategist, she protects and elevates the stories of justice-impacted families — especially in rural communities — so emotional truth is honored, not hidden.</p>
+          <p style="margin-bottom:18px;">Under her leadership the foundation has built Creative Haven workshops, community rituals, school and facility outreach, and initiatives like <strong>Project SEEN</strong> — seeing the needs of children and caregivers impacted by parental incarceration.</p>
+
+          <div class="quote-mark">“</div>
+          <blockquote class="pull">
+            We aim to foster resilience through self-reliance.
+            <cite>Keisha Nicholson · cited News Leader Newsmaker 2024</cite>
+          </blockquote>
+
+          <div class="pill-row" style="margin-top:20px;">
+            <span class="pill">Speaker</span>
+            <span class="pill">Workshop host</span>
+            <span class="pill">Community advocate</span>
+            <span class="pill red">Media guest</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span>Love Forward Foundation · 2026</span>
+        <span class="red">04 / Founder</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 05 PROGRAMS ========== -->
+  <section class="page" id="programs">
+    <div class="page-inner">
+      <p class="kicker">What we do</p>
+      <h2 class="page-title">Programs &amp; impact</h2>
+      <p class="page-sub">Verified pillars from the 2026 brochure and public press — qualitative impact only; no invented headcounts.</p>
+
+      <div class="grid-3" style="margin-bottom:24px;">
+        <div class="card">
+          <h3>Advocacy &amp; Awareness</h3>
+          <p>Statewide storytelling that names the shared sentence, reduces stigma, and invites communities to see families impacted by incarceration.</p>
+        </div>
+        <div class="card">
+          <h3>Connection &amp; Support</h3>
+          <p>Creative coping workshops, caregiver spaces, rituals, and pathways that help families feel seen, supported, and connected.</p>
+        </div>
+        <div class="card">
+          <h3>Ecosystem Building</h3>
+          <p>Partners, schools, facilities, and community events that strengthen reentry ecosystems by including families on the outside.</p>
+        </div>
+      </div>
+
+      <h3 style="font-size:1.25rem; margin-bottom:14px;">Featured work</h3>
+      <div class="grid-2" style="margin-bottom:24px;">
+        <div class="card dark">
+          <h3>Project SEEN</h3>
+          <p><em>Seeing the Needs of Children and Caregivers Impacted by Parental Incarceration.</em> Building stronger pathways to identify, support, and connect families to resources, relationships, and opportunities — because families serving a shared sentence deserve to be seen.</p>
+          <p style="margin-top:10px; font-size:0.8rem; color:#999;">Source: Love Forward Facebook · Sep 2026 · Waynesboro Kiwanis Club grant support</p>
+        </div>
+        <div class="card">
+          <h3>Creative Haven</h3>
+          <p>Creative-coping space and workshop model — art, hair, writing, candles, jewelry, music, rug tufting, and youth markets — meeting families with hands-on healing and belonging. Direction includes mobile outreach to meet families where they are.</p>
+          <p style="margin-top:10px; font-size:0.8rem; color:var(--gray);">Coverage: WMRA, WHSV, News Leader · address / mobile status confirm with Cory before public location claims</p>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-bottom:16px;">
+        <div>
+          <div class="photo-frame" style="aspect-ratio:4/3;">
+            <img src="assets/workshop-skate.jpg" alt="Create and Skate workshop — youth decorating skateboards" style="height:100%; object-fit:cover;" />
+          </div>
+          <p class="photo-cap">Create &amp; Skate — collaboration with Augusta County library (WMRA).</p>
+        </div>
+        <div>
+          <div class="photo-frame" style="aspect-ratio:4/3;">
+            <img src="assets/event-hires.jpg" alt="Love Forward community event" style="height:100%; object-fit:cover;" />
+          </div>
+          <p class="photo-cap">Community event photography from client-supplied assets.</p>
+        </div>
+      </div>
+
+      <h3 style="font-size:1.1rem; margin:18px 0 10px;">Also in the movement</h3>
+      <div class="pill-row">
+        <span class="pill outline">Ritual Guide · Rituals</span>
+        <span class="pill outline">Family Support Resources</span>
+        <span class="pill outline">Comm(UNITY) Kickback</span>
+        <span class="pill outline">School &amp; facility outreach</span>
+        <span class="pill outline">Community awareness events</span>
+      </div>
+
+      <div class="note-box">
+        <strong>Cory hold:</strong> Impact numbers, current Creative Haven address vs mobile unit, and upcoming events calendar need confirmation before client send. National brochure stats omitted until approved.
+      </div>
+
+      <div class="page-footer">
+        <span>Love Forward Foundation · 2026</span>
+        <span class="red">05 / Programs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 06 AUDIENCE ========== -->
+  <section class="page" id="audience">
+    <div class="page-inner">
+      <p class="kicker">Brand board</p>
+      <h2 class="page-title">Audience &amp; personality</h2>
+      <p class="page-sub">From the Love Forward Brand Board — the people we serve and how we show up.</p>
+
+      <div class="grid-2" style="margin-bottom:28px;">
+        <div class="card dark" style="min-height:220px;">
+          <p class="kicker" style="color:var(--red);">Target audience</p>
+          <h3 style="font-size:1.4rem; margin-bottom:12px;">Who we serve</h3>
+          <p style="font-size:1.05rem; color:#eee;">Children and caregivers navigating the impact of parental incarceration — and the families supporting them.</p>
+        </div>
+        <div class="card" style="min-height:220px; border-left-color:var(--black);">
+          <p class="kicker" style="color:var(--black);">Brand personality</p>
+          <h3 style="font-size:1.4rem; margin-bottom:12px;">How we show up</h3>
+          <div class="pill-row">
+            <span class="pill red">Bold</span>
+            <span class="pill">Human</span>
+            <span class="pill">Dignity-centered</span>
+            <span class="pill">Creative</span>
+            <span class="pill">Trustworthy</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div>
+          <h3 style="margin-bottom:10px;">Goals (brochure)</h3>
+          <ul class="values-list">
+            <li><span class="dot"></span><div>Families feel seen, supported, and connected</div></li>
+            <li><span class="dot"></span><div>Strengthen reentry ecosystems by including families</div></li>
+            <li><span class="dot"></span><div>Statewide awareness of the shared sentence</div></li>
+            <li><span class="dot"></span><div>Community for caregivers and adult children</div></li>
+          </ul>
+        </div>
+        <div>
+          <div class="photo-frame" style="aspect-ratio:16/9;">
+            <img src="assets/fb-cover.jpg" alt="Love Forward Foundation Facebook cover" style="height:100%; object-fit:cover;" />
+          </div>
+          <p class="photo-cap">Facebook cover art — useful for digital banners and headers.</p>
+          <p style="margin-top:16px; font-size:0.95rem; color:#333;">
+            Taglines in circulation: <em>STOP Stigma. CREATE Change. LOVE Forward.</em> ·
+            <em>Families Serve Sentences Too™</em> ·
+            <em>Supporting Families Impacted by Incarceration</em> ·
+            <em>Imagine Healing</em>
+          </p>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span>Love Forward Foundation · 2026</span>
+        <span class="red">06 / Audience</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 07 BRAND ========== -->
+  <section class="page" id="brand">
+    <div class="page-inner">
+      <p class="kicker">Visual identity</p>
+      <h2 class="page-title">Brand snapshot</h2>
+      <p class="page-sub">Palette, type, and logo lockups from the Love Forward Brand Board. Do not lead foundation materials with Rituals lime.</p>
+
+      <h3 style="margin-bottom:8px;">Color palette</h3>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="chip" style="background:#E82624;"></div>
+          <div class="hex">#E82624</div>
+          <div class="label">Brand Red</div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#000000;"></div>
+          <div class="hex">#000000</div>
+          <div class="label">Black</div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#FFFFFF; border-color:#E82624;"></div>
+          <div class="hex">#FFFFFF</div>
+          <div class="label">White</div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#808080;"></div>
+          <div class="hex">#808080</div>
+          <div class="label">Gray</div>
+        </div>
+      </div>
+
+      <h3 style="margin:24px 0 8px;">Typography</h3>
+      <div class="grid-2" style="margin-bottom:24px;">
+        <div class="card" style="border-left-color:var(--black);">
+          <div style="font-family:'League Spartan',sans-serif; font-size:2.4rem; font-weight:700; margin-bottom:6px;">Aa</div>
+          <h3>League Spartan</h3>
+          <p>Headings · display · navigation · strong statements</p>
+        </div>
+        <div class="card" style="border-left-color:var(--gray);">
+          <div style="font-family:'Open Sans',sans-serif; font-size:2.4rem; font-weight:400; margin-bottom:6px;">Aa</div>
+          <h3>Open Sans</h3>
+          <p>Body copy · captions · contact stacks · long-form readability</p>
+        </div>
+      </div>
+
+      <h3 style="margin-bottom:8px;">Logo lockups</h3>
+      <div class="logo-row">
+        <div class="logo-tile">
+          <img src="assets/logo-circular.png" alt="Circular profile logo" style="max-height:140px;" />
+          <span class="cap">Circular profile mark</span>
+        </div>
+        <div class="logo-tile dark">
+          <img src="assets/logo-wordmark.png" alt="Wordmark on dark" style="max-height:100px; filter:invert(1);" />
+          <span class="cap">Wordmark (light on dark)</span>
+        </div>
+        <div class="logo-tile">
+          <img src="assets/logo-lockup-red.png" alt="Red heart lockup" style="max-height:100px;" />
+          <span class="cap">Red heart + forward lockup</span>
+        </div>
+      </div>
+
+      <h3 style="margin:20px 0 10px;">Photo examples</h3>
+      <div class="grid-3">
+        <div>
+          <div class="photo-frame" style="aspect-ratio:3/4;">
+            <img src="assets/hero-keisha-audience.jpg" alt="Keisha addressing audience" style="height:100%; object-fit:cover; object-position:center top;" />
+          </div>
+          <p class="photo-cap">Speaking / stage</p>
+        </div>
+        <div>
+          <div class="photo-frame" style="aspect-ratio:3/4;">
+            <img src="assets/community-neon.jpg" alt="Neon community photo" style="height:100%; object-fit:cover;" />
+          </div>
+          <p class="photo-cap">Community / brand moment</p>
+        </div>
+        <div>
+          <div class="photo-frame" style="aspect-ratio:3/4;">
+            <img src="assets/workshop-skate.jpg" alt="Workshop" style="height:100%; object-fit:cover;" />
+          </div>
+          <p class="photo-cap">Workshop / youth program</p>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span>Love Forward Foundation · 2026</span>
+        <span class="red">07 / Brand</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 08 PRESS ========== -->
+  <section class="page" id="press">
+    <div class="page-inner">
+      <p class="kicker">Collaborate</p>
+      <h2 class="page-title">Press, media &amp; partnerships</h2>
+      <p class="page-sub">How to work with Love Forward — speaking, features, community partnerships, and amplification.</p>
+
+      <div class="grid-2" style="margin-bottom:28px;">
+        <div class="card">
+          <h3>Speaking &amp; hosting</h3>
+          <p>Keynotes, school talks, facility conversations, panels, and community events. Keisha brings lived-experience leadership and dignity-centered framing for audiences ready to see the shared sentence.</p>
+        </div>
+        <div class="card">
+          <h3>Press &amp; podcasts</h3>
+          <p>Interviews, features, and radio/podcast appearances that elevate justice-impacted families without exploitation. Assets and talking points available on request.</p>
+        </div>
+        <div class="card">
+          <h3>Community partners</h3>
+          <p>Libraries, schools, civic clubs, correctional facilities, foundations, and local businesses — workshops, awareness nights, sponsorships, and Project SEEN pathways.</p>
+        </div>
+        <div class="card">
+          <h3>Creative collaborations</h3>
+          <p>Create &amp; Skate–style programs, markets for impacted youth artists, ritual spaces, and awareness activations (e.g. community kickbacks, sports/arts spotlights).</p>
+        </div>
+      </div>
+
+      <h3 style="margin-bottom:12px;">As seen in / featured</h3>
+      <ul class="press-list">
+        <li>
+          <span class="outlet">WMRA</span>
+          <span class="desc">Staunton group supports families of incarcerated with Love Forward — Creative Haven origin, Create &amp; Skate.</span>
+          <span class="when">Sep 23, 2025 · wmra.org</span>
+        </li>
+        <li>
+          <span class="outlet">WHSV</span>
+          <span class="desc">Creative Haven workshops; Comm(UNITY) Kickback; Mental Illness Awareness Week resources; Rocktown Rollers awareness spotlight.</span>
+          <span class="when">2024–2026 · whsv.com</span>
+        </li>
+        <li>
+          <span class="outlet">The News Leader — Newsmaker 2024</span>
+          <span class="desc">Profile of Keisha Nicholson and the Love Forward Foundation — founder bio and workshop inventory.</span>
+          <span class="when">Jan 8, 2025 · newsleader.com</span>
+        </li>
+        <li>
+          <span class="outlet">WNRN Radio</span>
+          <span class="desc">Extended web interview with Love Forward / TLoveFF — audio asset supplied by Keisha for media use.</span>
+          <span class="when">Client-supplied MP3 · from-drive-wnrn</span>
+        </li>
+      </ul>
+
+      <div class="note-box" style="margin-top:20px;">
+        <strong>Partnership ask:</strong> Share time, skills, or lived experience · collaborate on statewide advocacy · help families get connected. Formal sponsorship packages and rate cards are <em>not</em> in this draft — confirm with Cory before inventing offers.
+      </div>
+
+      <div class="page-footer">
+        <span>Love Forward Foundation · 2026</span>
+        <span class="red">08 / Press</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 09 CONTACT ========== -->
+  <section class="page" id="contact">
+    <div class="page-inner">
+      <p class="kicker">Next step</p>
+      <h2 class="page-title">Contact &amp; booking</h2>
+      <p class="page-sub">Reach Love Forward Foundation directly. Preview card and landing links are for OTV / Cory review only.</p>
+
+      <div class="grid-2">
+        <div class="contact-stack">
+          <h3>Keisha Nicholson</h3>
+          <p style="color:#aaa; margin-bottom:16px; font-size:0.9rem;">Founder &amp; Executive Director · Love Forward Foundation</p>
+          <div class="contact-line"><span class="lbl">Email</span><a href="mailto:info@loveforwardfoundation.org">info@loveforwardfoundation.org</a></div>
+          <div class="contact-line"><span class="lbl">Phone</span><a href="tel:5402525291">540-252-5291</a></div>
+          <div class="contact-line"><span class="lbl">Web</span><a href="https://loveforwardfoundation.org" target="_blank" rel="noopener">loveforwardfoundation.org</a></div>
+          <div class="contact-line"><span class="lbl">Social</span><span>@tloveff · Facebook &amp; Instagram</span></div>
+          <div class="contact-line"><span class="lbl">EIN</span><span>81-5320312</span></div>
+        </div>
+        <div>
+          <div class="photo-frame" style="aspect-ratio:1; max-width:280px; margin-bottom:16px; border-radius:50%; overflow:hidden;">
+            <img src="assets/logo-circular.png" alt="Love Forward circular logo" style="height:100%; object-fit:cover;" />
+          </div>
+          <h3 style="margin-bottom:10px;">OTV preview links</h3>
+          <p style="font-size:0.92rem; margin-bottom:12px; color:#444;">GitHub Pages previews (not the live org site):</p>
+          <ul style="list-style:none; display:grid; gap:8px; font-size:0.92rem;">
+            <li>→ <a href="../">Card picker</a> (Option A locked)</li>
+            <li>→ <a href="../landing/">Landing preview</a></li>
+            <li>→ <a href="./">This media kit</a> (you are here)</li>
+          </ul>
+          <div class="note-box" style="margin-top:18px;">
+            <strong>Holds:</strong> Do not email Keisha from this draft. Do not push live.org. Do not print. Pixel will CloudAgent-sync when Cory approves.
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:32px; text-align:center; padding:28px; background:var(--soft); border-radius:12px;">
+        <p class="tagline" style="font-family:'League Spartan',sans-serif; font-weight:700; letter-spacing:0.06em; color:var(--red); font-size:1.15rem;">
+          STOP Stigma. CREATE Change. LOVE Forward.
+        </p>
+        <p style="margin-top:8px; color:var(--gray); font-size:0.9rem;">Families Serve Sentences Too™</p>
+      </div>
+
+      <div class="page-footer">
+        <span>Love Forward Foundation · 2026 · DRAFT</span>
+        <span class="red">09 / Contact</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer style="text-align:center; padding:24px 16px 48px; font-size:0.8rem; color:#666;">
+  OTV Agency · Love Forward Foundation Media Kit draft · For Cory review · Not APPROVED · Not client-sent · Not live.org
+  · <a href="../">Back to picker</a>
+</footer>
+
+</body>
+</html>
