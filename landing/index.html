@@ -94,8 +94,10 @@
     position: absolute; inset: 0;
   }
   .hero-media img {
-    width: 100%; height: 100%; object-fit: cover; object-position: center 35%;
+    width: 100%; height: 100%; object-fit: cover;
   }
+  .hero-media .desktop-only { object-position: center top; }
+  .hero-media .mobile-only { object-position: left top; }
   .hero-media .mobile-only { display: block; }
   .hero-media .desktop-only { display: none; }
   @media (min-width: 768px) {
@@ -298,6 +300,7 @@
         <a href="#what-we-do">What we do</a>
         <a href="#project-seen">Project SEEN</a>
         <a href="#about">About</a>
+        <a href="../media-kit/">Media Kit</a>
         <a href="#connect">Connect</a>
         <a class="btn" href="mailto:info@loveforwardfoundation.org" style="padding:0.55rem 1rem;font-size:0.82rem;">Get in touch</a>
       </div>
@@ -317,6 +320,7 @@
       <p class="mission">A statewide movement supporting caregivers, youth, and adult children living the shared sentence of incarceration — with dignity, belonging, and love that moves forward.</p>
       <div class="ctas">
         <a class="btn" href="mailto:info@loveforwardfoundation.org">Get in touch</a>
+        <a class="btn btn-secondary" href="../media-kit/">View media kit</a>
         <a class="btn btn-secondary" href="tel:+15402525291">Call 540-252-5291</a>
         <a class="btn btn-secondary" href="#project-seen">See Project SEEN</a>
       </div>
