@@ -265,7 +265,38 @@
     border: 1px solid var(--grey-line); background: #111;
   }
   .gallery img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16/10; }
-  .gallery .portrait img { aspect-ratio: 4/5; }
+
+  .create-skate-banner-block {
+    margin-top: 1.25rem;
+    padding: 0 0 0.25rem;
+  }
+  .create-skate-banner {
+    margin: 0;
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    min-height: clamp(11rem, 34vw, 20rem);
+    overflow: hidden;
+    background: #111;
+    border-top: 1px solid var(--grey-line);
+    border-bottom: 1px solid var(--grey-line);
+  }
+  .create-skate-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 44%;
+  }
+  @media (min-width: 760px) {
+    .create-skate-banner-block {
+      margin-top: 1.75rem;
+      padding: 0 1.25rem 0.25rem;
+    }
+    .create-skate-banner {
+      border: 1px solid var(--grey-line);
+      border-radius: 1rem;
+      aspect-ratio: 2.35 / 1;
+    }
+  }
 
   footer {
     border-top: 3px solid var(--red);
@@ -424,9 +455,14 @@
         <figure>
           <img src="assets/community-neon.jpg" alt="Community group under LOVE FORWARD neon sign" width="1400" height="1050" loading="lazy" />
         </figure>
-        <figure class="portrait">
-          <img src="assets/workshop-skate.jpg" alt="Youth workshop — Create and Skate skateboard build" width="1200" height="900" loading="lazy" />
-        </figure>
+      </div>
+    </div>
+    <div class="create-skate-banner-block">
+      <figure class="create-skate-banner">
+        <img src="assets/workshop-skate.jpg" alt="Create and Skate workshop — youth decorating skateboards" width="900" height="1200" loading="lazy" />
+      </figure>
+      <div class="wrap-wide">
+        <p class="media-caption">Create &amp; Skate — collaboration with Augusta County library (WMRA).</p>
       </div>
     </div>
   </section>
