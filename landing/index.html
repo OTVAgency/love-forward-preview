@@ -3,295 +3,283 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Love Forward Foundation — Families Serve Sentences Too™</title>
-<meta name="description" content="A statewide movement supporting caregivers, youth, and adult children living the shared sentence of incarceration." />
+<title>Love Forward Foundation — Stop Stigma. Create Change. Love Forward.</title>
+<meta name="description" content="A statewide movement supporting caregivers, youth, and adult children living the shared sentence of incarceration — with dignity, belonging, and love that moves forward." />
+<meta name="robots" content="noindex,nofollow" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --red: #FE1F11;
-    --cream: #FBF0E8;
+    --red: #E82624;
     --black: #000000;
     --white: #FFFFFF;
-    --muted: #444444;
-    --soft: #EFE4DB;
+    --grey: #808080;
+    --grey-soft: #F5F5F5;
+    --grey-line: #E6E6E6;
+    --muted: #4A4A4A;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    background: var(--cream);
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--white);
     color: var(--black);
-    line-height: 1.55;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  h1, h2, h3, .display {
+    font-family: "League Spartan", "Open Sans", system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
   }
   a { color: var(--red); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .wrap {
-    width: 100%;
-    max-width: 44rem;
-    margin: 0 auto;
-    padding: 0 1.25rem;
-  }
-  .wrap-wide {
-    width: 100%;
-    max-width: 56rem;
-    margin: 0 auto;
-    padding: 0 1.25rem;
-  }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  img { max-width: 100%; height: auto; display: block; }
+  .wrap { width: 100%; max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
+  .wrap-wide { width: 100%; max-width: 68rem; margin: 0 auto; padding: 0 1.25rem; }
+
   .preview-banner {
     background: var(--black);
     color: var(--white);
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-size: 0.78rem;
+    font-weight: 600;
     text-align: center;
     padding: 0.55rem 1rem;
+    letter-spacing: 0.02em;
   }
-  .preview-banner a { color: #ffc9c4; }
+  .preview-banner a { color: #ffb3ae; }
+
+  /* Nav */
+  .site-nav {
+    position: sticky; top: 0; z-index: 40;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--grey-line);
+  }
+  .site-nav .inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; padding: 0.7rem 0;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 0.65rem;
+    color: var(--black); text-decoration: none; font-weight: 700;
+  }
+  .brand:hover { text-decoration: none; }
+  .brand img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+  .brand span {
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.95rem; font-weight: 700; letter-spacing: -0.01em;
+  }
+  .nav-links { display: none; gap: 1.25rem; align-items: center; }
+  .nav-links a {
+    color: var(--muted); font-size: 0.88rem; font-weight: 600; text-decoration: none;
+  }
+  .nav-links a:hover { color: var(--red); }
+  @media (min-width: 760px) {
+    .nav-links { display: flex; }
+    .brand span { font-size: 1.05rem; }
+  }
+
   /* Hero */
   .hero {
-    text-align: center;
-    padding: 3rem 0 2.75rem;
-  }
-  .logo {
-    width: min(200px, 48vw);
-    height: auto;
-    margin-bottom: 1.5rem;
-  }
-  .org {
-    font-size: clamp(1.4rem, 4.5vw, 1.85rem);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
-  }
-  .tagline {
-    font-size: clamp(1.1rem, 3.5vw, 1.35rem);
-    font-weight: 600;
-    color: var(--red);
-    letter-spacing: -0.01em;
-    margin-bottom: 0.65rem;
-  }
-  .subtag {
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 1.35rem;
-  }
-  .mission {
-    font-size: 1.05rem;
-    color: var(--muted);
-    max-width: 34rem;
-    margin: 0 auto 1.75rem;
-  }
-  .ctas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    justify-content: center;
-    align-items: center;
-  }
-  .btn {
-    display: inline-block;
-    border: none;
-    background: var(--black);
+    position: relative;
     color: var(--white);
-    font-family: inherit;
-    font-size: 0.95rem;
-    font-weight: 600;
-    padding: 0.8rem 1.35rem;
-    border-radius: 999px;
-    text-decoration: none;
-    transition: background 0.15s ease;
+    min-height: clamp(28rem, 72vh, 42rem);
+    display: flex; align-items: flex-end;
+    background: var(--black);
+    overflow: hidden;
   }
-  .btn:hover { background: #222; text-decoration: none; color: var(--white); }
-  .btn-secondary {
-    background: transparent;
-    color: var(--black);
-    border: 1.5px solid var(--black);
+  .hero-media {
+    position: absolute; inset: 0;
   }
-  .btn-secondary:hover { background: var(--black); color: var(--white); }
-  .btn-ghost {
-    background: transparent;
-    color: var(--muted);
-    border: 1.5px solid transparent;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    padding: 0.5rem 0.75rem;
+  .hero-media img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center 35%;
   }
-  .btn-ghost:hover { color: var(--red); background: transparent; }
-  /* Sections */
-  section {
-    padding: 2.5rem 0;
+  .hero-media .mobile-only { display: block; }
+  .hero-media .desktop-only { display: none; }
+  @media (min-width: 768px) {
+    .hero-media .mobile-only { display: none; }
+    .hero-media .desktop-only { display: block; }
   }
-  .section-label {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--red);
-    margin-bottom: 0.5rem;
+  .hero-scrim {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.78) 100%),
+      linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 55%, rgba(0,0,0,0.35) 100%);
   }
-  h2 {
-    font-size: clamp(1.35rem, 3.5vw, 1.65rem);
-    font-weight: 700;
-    letter-spacing: -0.02em;
+  .hero-content {
+    position: relative; z-index: 2;
+    width: 100%;
+    padding: 3.5rem 0 2.75rem;
+  }
+  .eyebrow {
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--red); margin-bottom: 0.85rem;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 5.5vw, 3.35rem);
+    font-weight: 800; max-width: 16ch;
     margin-bottom: 0.85rem;
   }
-  .lede {
-    color: var(--muted);
-    font-size: 1.02rem;
-    max-width: 38rem;
-    margin-bottom: 1.5rem;
+  .tagline-line {
+    font-family: "League Spartan", sans-serif;
+    font-size: clamp(1rem, 2.4vw, 1.25rem);
+    font-weight: 700; margin-bottom: 1rem;
   }
-  .band {
-    background: var(--white);
-    border-top: 1px solid rgba(0,0,0,0.06);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+  .tagline-line .r { color: var(--red); }
+  .hero .mission {
+    max-width: 36rem; color: rgba(255,255,255,0.9);
+    font-size: 1.05rem; margin-bottom: 1.5rem;
   }
-  .band-soft { background: var(--soft); }
-  .band-dark {
-    background: var(--black);
-    color: var(--white);
+  .ctas { display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; }
+  .btn {
+    display: inline-block;
+    background: var(--red); color: var(--white);
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.95rem; font-weight: 700;
+    padding: 0.85rem 1.35rem; border-radius: 999px;
+    text-decoration: none; border: 2px solid var(--red);
+    transition: background .15s, color .15s, border-color .15s;
   }
-  .band-dark .section-label { color: #ff8a7f; }
+  .btn:hover { background: #c91f1d; border-color: #c91f1d; text-decoration: none; color: var(--white); }
+  .btn-secondary {
+    background: transparent; color: var(--white); border-color: rgba(255,255,255,0.85);
+  }
+  .btn-secondary:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+  .btn-dark { background: var(--black); border-color: var(--black); }
+  .btn-dark:hover { background: #222; border-color: #222; }
+  .btn-outline {
+    background: transparent; color: var(--black); border: 2px solid var(--black);
+  }
+  .btn-outline:hover { background: var(--black); color: var(--white); }
+
+  section { padding: 3.25rem 0; }
+  .section-label {
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--red); margin-bottom: 0.55rem;
+  }
+  h2 {
+    font-size: clamp(1.55rem, 3.5vw, 2.1rem);
+    font-weight: 800; margin-bottom: 0.85rem;
+  }
+  .lede { color: var(--muted); font-size: 1.05rem; max-width: 40rem; margin-bottom: 1.6rem; }
+
+  .band { background: var(--grey-soft); border-top: 1px solid var(--grey-line); border-bottom: 1px solid var(--grey-line); }
+  .band-dark { background: var(--black); color: var(--white); }
+  .band-dark .section-label { color: #ff8f8a; }
   .band-dark .lede, .band-dark p { color: rgba(255,255,255,0.82); }
-  .band-dark a { color: #ffc9c4; }
-  /* Cards */
-  .card-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  @media (min-width: 640px) {
+  .band-dark a:not(.btn) { color: #ffb3ae; }
+
+  .card-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  @media (min-width: 700px) {
     .card-grid.three { grid-template-columns: repeat(3, 1fr); }
     .card-grid.two { grid-template-columns: repeat(2, 1fr); }
   }
   .card {
     background: var(--white);
+    border: 1px solid var(--grey-line);
     border-radius: 1rem;
-    padding: 1.25rem 1.2rem;
-    border: 1px solid rgba(0,0,0,0.06);
+    padding: 1.35rem 1.25rem;
   }
-  .band .card { background: var(--cream); }
-  .band-soft .card { background: var(--white); }
+  .band .card { background: var(--white); }
+  .card-accent { border-left: 4px solid var(--red); }
   .card h3 {
-    font-size: 1.05rem;
-    font-weight: 700;
-    margin-bottom: 0.45rem;
+    font-size: 1.15rem; font-weight: 700; margin-bottom: 0.45rem;
   }
-  .card p {
-    font-size: 0.95rem;
-    color: var(--muted);
+  .card p { color: var(--muted); font-size: 0.98rem; }
+
+  .split {
+    display: grid; gap: 1.75rem; align-items: center;
   }
-  .card-accent {
-    border-left: 4px solid var(--red);
+  @media (min-width: 860px) {
+    .split { grid-template-columns: 1.05fr 0.95fr; gap: 2.5rem; }
+    .split.reverse { grid-template-columns: 0.95fr 1.05fr; }
+    .split.reverse .copy { order: 2; }
+    .split.reverse .media { order: 1; }
   }
-  /* Values */
-  .values {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.25rem;
+  .media-frame {
+    border-radius: 1.1rem; overflow: hidden;
+    border: 1px solid var(--grey-line);
+    background: #111;
   }
-  .chip {
-    display: inline-block;
-    background: var(--white);
-    border: 1px solid rgba(0,0,0,0.08);
-    border-radius: 999px;
-    padding: 0.4rem 0.85rem;
-    font-size: 0.85rem;
-    font-weight: 600;
+  .media-frame img { width: 100%; height: auto; object-fit: cover; }
+  .media-frame.tall img { aspect-ratio: 4/5; object-fit: cover; object-position: center 30%; }
+  .media-caption {
+    font-size: 0.8rem; color: var(--grey); margin-top: 0.55rem;
   }
-  .band-soft .chip { background: var(--cream); }
-  /* Credibility */
+
   .cred {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 0.5rem;
+    display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin-top: 1.5rem;
   }
-  @media (min-width: 560px) {
-    .cred { grid-template-columns: repeat(3, 1fr); }
-  }
+  @media (min-width: 560px) { .cred { grid-template-columns: repeat(3, 1fr); } }
   .cred-item {
-    text-align: center;
-    padding: 1rem 0.75rem;
+    text-align: center; padding: 1.1rem 0.75rem;
+    background: var(--white); border: 1px solid var(--grey-line); border-radius: 0.85rem;
   }
   .cred-item strong {
-    display: block;
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
+    display: block; font-family: "League Spartan", sans-serif;
+    font-size: 1.2rem; font-weight: 800; margin-bottom: 0.2rem;
   }
-  .cred-item span {
-    font-size: 0.9rem;
-    color: var(--muted);
+  .cred-item span { font-size: 0.88rem; color: var(--muted); }
+
+  .values { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .chip {
+    display: inline-block;
+    background: var(--white); border: 1px solid var(--grey-line);
+    border-radius: 999px; padding: 0.45rem 0.9rem;
+    font-size: 0.88rem; font-weight: 600;
   }
-  /* Press */
-  .press-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.65rem;
-  }
+  .band .chip { background: var(--white); }
+
+  .press-list { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
   .press-list a {
-    display: block;
-    background: var(--white);
-    border-radius: 0.75rem;
-    padding: 0.9rem 1.1rem;
-    color: var(--black);
-    font-weight: 600;
-    font-size: 0.95rem;
-    border: 1px solid rgba(0,0,0,0.06);
+    display: block; background: var(--white);
+    border: 1px solid var(--grey-line); border-radius: 0.85rem;
+    padding: 0.95rem 1.1rem; color: var(--black); font-weight: 600; font-size: 0.95rem;
     text-decoration: none;
   }
   .press-list a:hover { border-color: var(--red); color: var(--red); }
   .press-list .outlet {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--red);
-    margin-bottom: 0.2rem;
+    display: block; font-family: "League Spartan", sans-serif;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--red); margin-bottom: 0.2rem;
   }
-  /* Footer */
+
+  .gallery {
+    display: grid; gap: 0.85rem;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 700px) {
+    .gallery { grid-template-columns: 1.2fr 1fr; }
+    .gallery .span-2 { grid-column: 1 / -1; }
+  }
+  .gallery figure {
+    margin: 0; border-radius: 1rem; overflow: hidden;
+    border: 1px solid var(--grey-line); background: #111;
+  }
+  .gallery img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16/10; }
+  .gallery .portrait img { aspect-ratio: 4/5; }
+
   footer {
-    border-top: 2px solid rgba(254, 31, 17, 0.35);
-    padding: 2rem 0 2.5rem;
-    text-align: center;
+    border-top: 3px solid var(--red);
+    padding: 2.25rem 0 2.5rem; text-align: center; background: var(--white);
   }
-  footer .logo-sm {
-    width: 72px;
-    height: auto;
-    margin: 0 auto 1rem;
-    display: block;
-    opacity: 0.9;
-  }
-  .contact {
-    font-size: 0.9rem;
-    color: var(--muted);
-    line-height: 1.75;
-  }
+  footer .logo-sm { width: 72px; height: 72px; margin: 0 auto 1rem; border-radius: 50%; }
+  .contact { font-size: 0.92rem; color: var(--muted); line-height: 1.8; }
   .contact strong {
-    color: var(--black);
-    font-weight: 600;
-    display: block;
-    margin-bottom: 0.3rem;
+    display: block; color: var(--black);
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem;
   }
   .contact a { color: var(--muted); }
   .contact a:hover { color: var(--red); }
-  .ein {
-    margin-top: 0.75rem;
-    font-size: 0.8rem;
-    color: #777;
-  }
-  .back-cards {
-    margin-top: 1.25rem;
-    font-size: 0.85rem;
-  }
+  .ein { margin-top: 0.75rem; font-size: 0.8rem; color: var(--grey); }
+  .back-cards { margin-top: 1.25rem; font-size: 0.85rem; }
 </style>
 </head>
 <body>
@@ -300,25 +288,46 @@
     <a href="https://loveforwardfoundation.org" rel="noopener noreferrer">loveforwardfoundation.org</a>
   </div>
 
-  <header class="wrap hero">
-    <img class="logo" src="assets/logo.png" alt="Love Forward Foundation logo" width="200" height="169" />
-    <h1 class="org">Love Forward Foundation</h1>
-    <p class="tagline">Families Serve Sentences Too™</p>
-    <p class="subtag">Stop Stigma · Create Change · Love Forward</p>
-    <p class="mission">A statewide movement supporting caregivers, youth, and adult children living the shared sentence of incarceration — with dignity, belonging, and love that moves forward.</p>
-    <div class="ctas">
-      <a class="btn" href="mailto:info@loveforwardfoundation.org">Get in touch</a>
-      <a class="btn btn-secondary" href="tel:+15402525291">Call 540-252-5291</a>
-      <a class="btn btn-secondary" href="https://drive.google.com/file/d/1EHn81f3ZWiNH7yd02qR8wvrYZZ3Us49G/view" rel="noopener noreferrer" target="_blank">Download brochure</a>
-      <a class="btn-ghost" href="#project-seen">See Project SEEN</a>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="wrap-wide inner">
+      <a class="brand" href="#top">
+        <img src="assets/logo-profile.png" alt="" width="42" height="42" />
+        <span>Love Forward Foundation</span>
+      </a>
+      <div class="nav-links">
+        <a href="#what-we-do">What we do</a>
+        <a href="#project-seen">Project SEEN</a>
+        <a href="#about">About</a>
+        <a href="#connect">Connect</a>
+        <a class="btn" href="mailto:info@loveforwardfoundation.org" style="padding:0.55rem 1rem;font-size:0.82rem;">Get in touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-media" aria-hidden="true">
+      <img class="desktop-only" src="assets/hero-desktop.jpg" alt="" width="1600" height="900" />
+      <img class="mobile-only" src="assets/hero-mobile.jpg" alt="" width="900" height="1200" />
+      <div class="hero-scrim"></div>
+    </div>
+    <div class="wrap-wide hero-content">
+      <p class="eyebrow">Families Serve Sentences Too™</p>
+      <h1>Love that moves families forward.</h1>
+      <p class="tagline-line"><span class="r">STOP</span> Stigma. <span class="r">CREATE</span> Change. <span class="r">LOVE</span> Forward.</p>
+      <p class="mission">A statewide movement supporting caregivers, youth, and adult children living the shared sentence of incarceration — with dignity, belonging, and love that moves forward.</p>
+      <div class="ctas">
+        <a class="btn" href="mailto:info@loveforwardfoundation.org">Get in touch</a>
+        <a class="btn btn-secondary" href="tel:+15402525291">Call 540-252-5291</a>
+        <a class="btn btn-secondary" href="#project-seen">See Project SEEN</a>
+      </div>
     </div>
   </header>
 
-  <section class="band">
+  <section class="band" id="what-we-do">
     <div class="wrap-wide">
       <p class="section-label">What we do</p>
       <h2>Three pillars. One movement.</h2>
-      <p class="lede">From the foundation’s brochure and community work: advocacy that makes families visible, connection that ends isolation, and ecosystems that include the people serving the sentence on the outside.</p>
+      <p class="lede">Advocacy that makes families visible, connection that ends isolation, and ecosystems that include the people serving the sentence on the outside.</p>
       <div class="card-grid three">
         <article class="card card-accent">
           <h3>Advocacy &amp; Awareness</h3>
@@ -342,22 +351,32 @@
       <h2>Project SEEN</h2>
       <p class="lede" style="margin-bottom:1rem;"><strong style="color:#fff;">Seeing the Needs of Children and Caregivers Impacted by Parental Incarceration.</strong></p>
       <p style="margin-bottom:1rem;">When a parent is incarcerated, families serve the sentence too. Through Project SEEN, Love Forward is building stronger pathways to identify, support, and connect these families to resources, relationships, and opportunities.</p>
-      <p style="margin-bottom:1.25rem;">Supported by the Waynesboro Kiwanis Club. Because families serving a shared sentence deserve to be seen.</p>
-      <a class="btn" href="mailto:info@loveforwardfoundation.org?subject=Project%20SEEN" style="background:var(--red);">Ask about Project SEEN</a>
+      <p style="margin-bottom:1.35rem;">Supported by the Waynesboro Kiwanis Club. Because families serving a shared sentence deserve to be seen.</p>
+      <a class="btn" href="mailto:info@loveforwardfoundation.org?subject=Project%20SEEN">Ask about Project SEEN</a>
     </div>
   </section>
 
-  <section>
-    <div class="wrap">
-      <p class="section-label">About</p>
-      <h2>Founded in lived experience</h2>
-      <p class="lede">Love Forward Foundation is a justice-rooted nonprofit serving the Shenandoah Valley and Virginia statewide. The work centers healing-centered curriculum, creative coping, community rituals, and digital storytelling so emotional truth is honored — not hidden.</p>
-      <div class="card card-accent" style="background:var(--white);">
-        <h3>Keisha Nicholson</h3>
-        <p style="margin-bottom:0.65rem;"><strong>Founder &amp; Executive Director</strong></p>
-        <p>Keisha’s leadership is rooted in the lived experience of parental incarceration. Early work began with pen pals and care packages during visitation, grew into creative workshops and a brick-and-mortar Creative Haven in downtown Staunton, and continues as a family-focused, caregiver-centered movement — including outreach in schools, facilities, and community events. Her aim, as she has put it: foster resilience through self-reliance.</p>
+  <section id="about">
+    <div class="wrap-wide">
+      <div class="split">
+        <div class="copy">
+          <p class="section-label">About</p>
+          <h2>Founded in lived experience</h2>
+          <p class="lede">Love Forward Foundation is a justice-rooted nonprofit serving the Shenandoah Valley and Virginia statewide. The work centers healing-centered curriculum, creative coping, community rituals, and digital storytelling so emotional truth is honored — not hidden.</p>
+          <div class="card card-accent">
+            <h3>Keisha Nicholson</h3>
+            <p style="margin-bottom:0.55rem;"><strong>Founder &amp; Executive Director</strong></p>
+            <p>Keisha’s leadership is rooted in the lived experience of parental incarceration. Early work began with pen pals and care packages during visitation, grew into creative workshops and a brick-and-mortar Creative Haven in downtown Staunton, and continues as a family-focused, caregiver-centered movement — including outreach in schools, facilities, and community events.</p>
+          </div>
+        </div>
+        <div class="media">
+          <div class="media-frame">
+            <img src="assets/hero-full-content.jpg" alt="Keisha Nicholson speaking to a filled auditorium with Love Forward branding on stage" width="1152" height="528" />
+          </div>
+          <p class="media-caption">Keisha speaking with youth — Love Forward on stage.</p>
+        </div>
       </div>
-      <div class="cred" style="margin-top:1.5rem;">
+      <div class="cred">
         <div class="cred-item">
           <strong>Since ~2015</strong>
           <span>Grassroots family support</span>
@@ -374,28 +393,36 @@
     </div>
   </section>
 
-  <section class="band-soft">
+  <section class="band" id="programs">
     <div class="wrap-wide">
       <p class="section-label">Programs &amp; gathering spaces</p>
       <h2>How families show up with us</h2>
-      <p class="lede">Creative coping, ritual practice, and community celebration — meeting people where they are. (Street address held until confirmed; recent press also notes a mobile-unit direction.)</p>
-      <div class="card-grid two">
+      <p class="lede">Creative coping, ritual practice, and community celebration — meeting people where they are.</p>
+      <div class="card-grid two" style="margin-bottom:1.5rem;">
         <article class="card">
           <h3>Creative Haven</h3>
           <p>A creative-coping space for youth and caregivers — art, hair, writing, candles, jewelry, music, and more — with workshops that often end in a youth market where young people sell what they made.</p>
         </article>
         <article class="card">
           <h3>Rituals &amp; Ritual Guide</h3>
-          <p>Mind, body, and spiritual practices already on the live site: Pick a Truth, Write + Release, Ground with a Heart, Tie a Thread — plus a Ritual Playlist for soft resets.</p>
+          <p>Mind, body, and spiritual practices: Pick a Truth, Write + Release, Ground with a Heart, Tie a Thread — plus a Ritual Playlist for soft resets.</p>
         </article>
         <article class="card">
           <h3>Community events</h3>
-          <p>Examples from recent years: Create &amp; Skate with the Augusta County library, Comm(UNITY) Kickback at Creative Haven, school and facility talks, and community awareness partnerships.</p>
+          <p>Create &amp; Skate, Comm(UNITY) Kickback, school and facility talks, and community awareness partnerships that keep families connected.</p>
         </article>
         <article class="card">
           <h3>Family Support Resources</h3>
-          <p>A dedicated hub for families walking incarceration and reentry — marked Coming Soon on the live site, with Project SEEN strengthening pathways to get connected.</p>
+          <p>A dedicated hub for families walking incarceration and reentry — with Project SEEN strengthening pathways to get connected.</p>
         </article>
+      </div>
+      <div class="gallery">
+        <figure>
+          <img src="assets/community-neon.jpg" alt="Community group under LOVE FORWARD neon sign" width="1400" height="1050" loading="lazy" />
+        </figure>
+        <figure class="portrait">
+          <img src="assets/workshop-skate.jpg" alt="Youth workshop — Create and Skate skateboard build" width="1200" height="900" loading="lazy" />
+        </figure>
       </div>
     </div>
   </section>
@@ -410,6 +437,7 @@
         <span class="chip">Connection</span>
         <span class="chip">Community Care</span>
         <span class="chip">Lived Experience Leadership</span>
+        <span class="chip">Bold · Human · Trustworthy</span>
       </div>
     </div>
   </section>
@@ -447,24 +475,26 @@
     </div>
   </section>
 
-  <section class="band-soft">
+  <section id="connect">
     <div class="wrap" style="text-align:center;">
       <p class="section-label">Join the movement</p>
       <h2>Stay connected</h2>
       <p class="lede" style="margin-left:auto;margin-right:auto;">Share time, skills, or lived experience. Collaborate on statewide advocacy. Help families get connected. Follow the work at @tloveff.</p>
-      <div class="ctas">
+      <div class="ctas" style="justify-content:center;">
         <a class="btn" href="mailto:info@loveforwardfoundation.org">Email the foundation</a>
-        <a class="btn btn-secondary" href="https://drive.google.com/file/d/1EHn81f3ZWiNH7yd02qR8wvrYZZ3Us49G/view" rel="noopener noreferrer" target="_blank">Download brochure</a>
-        <a class="btn btn-secondary" href="https://www.facebook.com/tloveff" rel="noopener noreferrer" target="_blank">Facebook</a>
-        <a class="btn btn-secondary" href="https://www.instagram.com/tloveff/" rel="noopener noreferrer" target="_blank">Instagram</a>
-        <a class="btn-ghost" href="https://loveforwardfoundation.org" rel="noopener noreferrer" target="_blank">Visit live site</a>
+        <a class="btn btn-outline" href="https://www.facebook.com/tloveff" rel="noopener noreferrer" target="_blank">Facebook</a>
+        <a class="btn btn-outline" href="https://www.instagram.com/tloveff/" rel="noopener noreferrer" target="_blank">Instagram</a>
       </div>
+      <p style="margin-top:1.25rem;font-size:0.88rem;color:var(--grey);">
+        Preview only · live site remains
+        <a href="https://loveforwardfoundation.org" rel="noopener noreferrer">loveforwardfoundation.org</a>
+      </p>
     </div>
   </section>
 
   <footer>
     <div class="wrap">
-      <img class="logo-sm" src="assets/logo.png" alt="" width="72" height="61" aria-hidden="true" />
+      <img class="logo-sm" src="assets/logo-profile.png" alt="" width="72" height="72" aria-hidden="true" />
       <div class="contact">
         <strong>Love Forward Foundation</strong>
         <a href="mailto:info@loveforwardfoundation.org">info@loveforwardfoundation.org</a><br />
