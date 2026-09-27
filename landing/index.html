@@ -252,20 +252,55 @@
     text-transform: uppercase; color: var(--red); margin-bottom: 0.2rem;
   }
 
+  .program-banner {
+    position: relative;
+    margin: 0 0 1.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid var(--grey-line);
+    background: #111;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  }
+  .program-banner img {
+    width: 100%;
+    aspect-ratio: 21 / 8;
+    object-fit: cover;
+    object-position: center 42%;
+  }
+  .program-banner figcaption {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 2.5rem 1.35rem 1.1rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.82) 100%);
+    color: rgba(255,255,255,0.95);
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .program-banner .banner-label {
+    display: block;
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.25rem;
+  }
+  @media (min-width: 700px) {
+    .program-banner img { aspect-ratio: 21 / 7; object-position: center 38%; }
+    .program-banner figcaption { padding: 3rem 1.75rem 1.35rem; font-size: 1rem; }
+  }
+
   .gallery {
     display: grid; gap: 0.85rem;
     grid-template-columns: 1fr;
-  }
-  @media (min-width: 700px) {
-    .gallery { grid-template-columns: 1.2fr 1fr; }
-    .gallery .span-2 { grid-column: 1 / -1; }
   }
   .gallery figure {
     margin: 0; border-radius: 1rem; overflow: hidden;
     border: 1px solid var(--grey-line); background: #111;
   }
   .gallery img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16/10; }
-  .gallery .portrait img { aspect-ratio: 4/5; }
 
   footer {
     border-top: 3px solid var(--red);
@@ -420,12 +455,16 @@
           <p>A dedicated hub for families walking incarceration and reentry — with Project SEEN strengthening pathways to get connected.</p>
         </article>
       </div>
+      <figure class="program-banner">
+        <img src="assets/workshop-skate.jpg" alt="Create and Skate workshop — youth decorating skateboards with Augusta County library" width="900" height="1200" loading="lazy" />
+        <figcaption>
+          <span class="banner-label">Community events</span>
+          Create &amp; Skate — collaboration with Augusta County library (WMRA).
+        </figcaption>
+      </figure>
       <div class="gallery">
         <figure>
           <img src="assets/community-neon.jpg" alt="Community group under LOVE FORWARD neon sign" width="1400" height="1050" loading="lazy" />
-        </figure>
-        <figure class="portrait">
-          <img src="assets/workshop-skate.jpg" alt="Youth workshop — Create and Skate skateboard build" width="1200" height="900" loading="lazy" />
         </figure>
       </div>
     </div>
