@@ -5,37 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Pick a business card — Love Forward Foundation</title>
 <style>
-  :root { --cream:#FBF0E8; --red:#E82624; --black:#000; --gray:#808080; --white:#FFFFFF; }
+  :root { --cream:#FFFFFF; --red:#E82624; --black:#000; --gray:#555; --white:#fff; --soft:#F5F5F5; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; background:var(--cream); color:var(--black); line-height:1.35; padding:20px 16px 48px; }
+  body { font-family: system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; background:var(--soft); color:var(--black); line-height:1.35; padding:20px 16px 48px; }
   .wrap { max-width:1100px; margin:0 auto; }
-  header { display:flex; align-items:center; gap:14px; margin-bottom:18px; padding-bottom:14px; border-bottom:3px solid var(--red); }
+  header { display:flex; align-items:center; gap:14px; margin-bottom:14px; padding-bottom:14px; border-bottom:3px solid var(--red); }
   header img { height:48px; width:auto; }
   header h1 { font-size:clamp(1.35rem,3.5vw,1.85rem); font-weight:800; letter-spacing:-0.02em; }
   header p { font-size:0.95rem; color:var(--gray); margin-top:2px; }
+  .lock-note {
+    background:#fff; border:2px solid var(--red); border-radius:12px;
+    padding:12px 14px; margin-bottom:18px; font-size:0.95rem;
+  }
+  .lock-note strong { color:var(--red); }
   .grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
   @media (max-width:820px){ .grid{ grid-template-columns:1fr; } }
-  .option { background:var(--white); border:2px solid #e5d5c8; border-radius:14px; padding:16px; display:flex; flex-direction:column; gap:12px; transition:border-color .15s, box-shadow .15s, opacity .15s; }
-  .option.selected { border-color:var(--red); box-shadow:0 0 0 3px rgba(232,38,36,.18); }
-  .option.alt { opacity:0.72; }
+  .option { background:var(--white); border:2px solid #ddd; border-radius:14px; padding:16px; display:flex; flex-direction:column; gap:12px; transition:border-color .15s, box-shadow .15s; }
+  .option.selected, .option.locked { border-color:var(--red); box-shadow:0 0 0 3px rgba(232,38,36,.18); }
+  .option.dim { opacity:0.72; }
   .option h2 { font-size:1.2rem; font-weight:800; }
   .badge { display:inline-block; background:var(--red); color:var(--white); font-size:.72rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:3px 8px; border-radius:999px; margin-right:6px; vertical-align:middle; }
-  .badge-locked { background:var(--black); }
+  .badge.alt { background:#333; }
   .diff { font-size:.95rem; color:var(--gray); margin-top:-4px; }
   .side-label { font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--gray); margin-bottom:4px; }
   .mock { width:100%; height:auto; border-radius:8px; border:1px solid #ddd; background:var(--white); display:block; }
   .pair { display:flex; flex-direction:column; gap:10px; }
   button.pick { appearance:none; border:none; background:var(--black); color:var(--white); font-size:1rem; font-weight:700; padding:12px 16px; border-radius:10px; cursor:pointer; margin-top:4px; }
   button.pick:hover { background:#222; }
-  button.pick:disabled { background:var(--gray); cursor:default; opacity:0.85; }
-  .option.selected button.pick { background:var(--red); }
+  .option.selected button.pick, .option.locked button.pick { background:var(--red); }
   .note { display:none; margin-top:4px; padding:10px 12px; background:#fff5f3; border-left:4px solid var(--red); border-radius:6px; font-size:.95rem; }
   .note.show { display:block; }
   .note a { color:var(--red); font-weight:700; }
-  .locked-banner { margin-bottom:14px; padding:10px 14px; background:var(--black); color:var(--white); border-radius:10px; font-size:.92rem; font-weight:600; text-align:center; }
-  .locked-banner strong { color:#ffc9c4; }
   footer { margin-top:22px; font-size:.85rem; color:var(--gray); text-align:center; }
-  footer a { color:var(--red); font-weight:600; }
+  footer a { color:var(--red); font-weight:700; }
 </style>
 </head>
 <body>
@@ -43,33 +45,49 @@
     <header>
       <img src="assets/logo.png" alt="Love Forward" />
       <div>
-        <h1>Business card preview</h1>
-        <p>Love Forward Foundation · Option A locked for print</p>
+        <h1>Pick a business card</h1>
+        <p>Love Forward Foundation · white / red / black · Option A locked</p>
       </div>
     </header>
-    <p class="locked-banner"><strong>Option A is locked.</strong> White card stock · brand red · QR to loveforwardfoundation.org</p>
+    <div class="lock-note">
+      <strong>Option A LOCKED</strong> (client pick). Re-rendered on <strong>true white</strong> background with brand red <code>#E82624</code>. QR → loveforwardfoundation.org. Print/export held.
+      · <a href="landing/">View landing preview →</a>
+    </div>
     <div class="grid">
-      <section class="option selected" id="optA">
-        <h2><span class="badge">Option A</span><span class="badge badge-locked">Locked</span> Stacked contact front</h2>
-        <p class="diff">Front: name + title + contacts left, large QR right. Back: logo only.</p>
+      <section class="option locked selected" id="optA">
+        <h2><span class="badge">Option A · Locked</span> Stacked contact front</h2>
+        <p class="diff">Front: name + title + contacts left, large QR right. Back: logo only. White ground.</p>
         <div class="pair">
           <div><div class="side-label">Front</div><img class="mock" src="assets/option-a-front.png" alt="Option A front" /></div>
           <div><div class="side-label">Back</div><img class="mock" src="assets/option-a-back.png" alt="Option A back" /></div>
         </div>
-        <button class="pick" type="button" disabled>Selected for print</button>
-        <div class="note show" id="noteA">Option A locked — <a href="mailto:cory@otv.agency?subject=Love%20Forward%20card%20locked">email Cory</a> with any tweaks before press.</div>
+        <button class="pick" type="button" onclick="prefer('A')">Option A selected</button>
+        <div class="note show" id="noteA">Client preference: Option A — white background. Tell Cory if anything needs a tweak — <a href="mailto:cory@otv.agency?subject=Love%20Forward%20card%20pick&body=Option%20A%20confirmed%20(white%20bg)">email Cory</a></div>
       </section>
-      <section class="option alt" id="optB">
-        <h2><span class="badge" style="background:var(--gray);">Option B</span> Centered identity front</h2>
-        <p class="diff">Alternate layout (not selected). Front: centered identity; contacts + QR below.</p>
+      <section class="option dim" id="optB">
+        <h2><span class="badge alt">Option B</span> Centered identity front</h2>
+        <p class="diff">Alternate (not selected). Front: name + title centered on top, contacts + QR below. Back: logo only. Also white ground.</p>
         <div class="pair">
           <div><div class="side-label">Front</div><img class="mock" src="assets/option-b-front.png" alt="Option B front" /></div>
           <div><div class="side-label">Back</div><img class="mock" src="assets/option-b-back.png" alt="Option B back" /></div>
         </div>
-        <button class="pick" type="button" disabled>Not selected</button>
+        <button class="pick" type="button" onclick="prefer('B')">I prefer B instead</button>
+        <div class="note" id="noteB">Tell Cory you prefer Option B — <a href="mailto:cory@otv.agency?subject=Love%20Forward%20card%20pick&body=I%20prefer%20Option%20B">email Cory</a></div>
       </section>
     </div>
-    <footer>Love Forward Foundation · white / red / black · <a href="landing/">View landing preview</a></footer>
+    <footer>
+      Love Forward Foundation · Option A locked · white / #E82624 / black · print held
+      · <a href="landing/">Landing preview</a>
+    </footer>
   </div>
+<script>
+function prefer(which){
+  document.querySelectorAll('.option').forEach(el=>{el.classList.remove('selected'); el.classList.add('dim');});
+  document.querySelectorAll('.note').forEach(el=>el.classList.remove('show'));
+  const el=document.getElementById('opt'+which);
+  el.classList.add('selected'); el.classList.remove('dim');
+  document.getElementById('note'+which).classList.add('show');
+}
+</script>
 </body>
 </html>
