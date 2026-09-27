@@ -7,23 +7,26 @@
 <meta name="description" content="A statewide movement supporting caregivers, youth, and adult children living the shared sentence of incarceration." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --red: #FE1F11;
+    --red: #E82624;
     --cream: #FBF0E8;
     --black: #000000;
     --white: #FFFFFF;
-    --muted: #444444;
+    --muted: #808080;
     --soft: #EFE4DB;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     background: var(--cream);
     color: var(--black);
     line-height: 1.55;
+  }
+  h1, h2, h3, .org, .tagline, .section-label, .btn, .chip, .press-list .outlet {
+    font-family: "League Spartan", system-ui, sans-serif;
   }
   a { color: var(--red); text-decoration: none; }
   a:hover { text-decoration: underline; }
@@ -51,7 +54,24 @@
   /* Hero */
   .hero {
     text-align: center;
-    padding: 3rem 0 2.75rem;
+    padding: 2.5rem 0 2.75rem;
+  }
+  .hero-visual {
+    width: 100%;
+    max-width: 44rem;
+    margin: 0 auto 1.75rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 3px solid var(--red);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+  }
+  .hero-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 11;
+    object-fit: cover;
+    object-position: center 20%;
   }
   .logo {
     width: min(200px, 48vw);
@@ -259,7 +279,7 @@
   }
   /* Footer */
   footer {
-    border-top: 2px solid rgba(254, 31, 17, 0.35);
+    border-top: 2px solid rgba(232, 38, 36, 0.35);
     padding: 2rem 0 2.5rem;
     text-align: center;
   }
@@ -301,10 +321,13 @@
   </div>
 
   <header class="wrap hero">
+    <div class="hero-visual">
+      <img src="assets/hero-keisha.jpg" alt="Keisha Nicholson speaking with community members" width="1200" height="1048" />
+    </div>
     <img class="logo" src="assets/logo.png" alt="Love Forward Foundation logo" width="200" height="169" />
     <h1 class="org">Love Forward Foundation</h1>
     <p class="tagline">Families Serve Sentences Too™</p>
-    <p class="subtag">Stop Stigma · Create Change · Love Forward</p>
+    <p class="subtag">STOP Stigma · CREATE Change · LOVE Forward</p>
     <p class="mission">A statewide movement supporting caregivers, youth, and adult children living the shared sentence of incarceration — with dignity, belonging, and love that moves forward.</p>
     <div class="ctas">
       <a class="btn" href="mailto:info@loveforwardfoundation.org">Get in touch</a>
