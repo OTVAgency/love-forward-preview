@@ -95,14 +95,10 @@
   }
   .hero-media img {
     width: 100%; height: 100%; object-fit: cover;
+    object-position: 42% center;
   }
-  .hero-media .desktop-only { object-position: center top; }
-  .hero-media .mobile-only { object-position: left top; }
-  .hero-media .mobile-only { display: block; }
-  .hero-media .desktop-only { display: none; }
-  @media (min-width: 768px) {
-    .hero-media .mobile-only { display: none; }
-    .hero-media .desktop-only { display: block; }
+  @media (max-width: 767px) {
+    .hero-media img { object-position: 28% center; }
   }
   .hero-scrim {
     position: absolute; inset: 0;
@@ -238,19 +234,43 @@
   }
   .band .chip { background: var(--white); }
 
-  .press-list { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
-  .press-list a {
-    display: block; background: var(--white);
-    border: 1px solid var(--grey-line); border-radius: 0.85rem;
-    padding: 0.95rem 1.1rem; color: var(--black); font-weight: 600; font-size: 0.95rem;
-    text-decoration: none;
+  .press-list {
+    list-style: none;
+    display: grid; gap: 0.85rem;
+    grid-template-columns: 1fr;
   }
-  .press-list a:hover { border-color: var(--red); color: var(--red); }
+  @media (min-width: 640px) {
+    .press-list { grid-template-columns: repeat(2, 1fr); }
+  }
+  .press-list a {
+    display: grid;
+    grid-template-columns: 7.75rem 1fr;
+    align-items: stretch;
+    background: var(--white);
+    border: 1px solid var(--grey-line); border-radius: 0.85rem;
+    overflow: hidden;
+    color: var(--black); font-weight: 600; font-size: 0.9rem;
+    line-height: 1.35;
+    text-decoration: none;
+    min-height: 5.5rem;
+  }
+  .press-list a:hover { border-color: var(--red); text-decoration: none; }
+  .press-list a:hover .press-headline { color: var(--red); }
+  .press-thumb {
+    width: 100%; height: 100%;
+    object-fit: cover; aspect-ratio: 16 / 10;
+    background: #111;
+  }
+  .press-copy {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 0.75rem 0.9rem;
+  }
   .press-list .outlet {
     display: block; font-family: "League Spartan", sans-serif;
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--red); margin-bottom: 0.2rem;
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--red); margin-bottom: 0.25rem;
   }
+  .press-headline { color: var(--black); }
 
   .program-banner {
     position: relative;
@@ -344,8 +364,7 @@
 
   <header class="hero" id="top">
     <div class="hero-media" aria-hidden="true">
-      <img class="desktop-only" src="assets/hero-desktop.jpg" alt="" width="1600" height="900" />
-      <img class="mobile-only" src="assets/hero-mobile.jpg" alt="" width="900" height="1200" />
+      <img src="assets/fb-cover.jpg" alt="" width="851" height="315" />
       <div class="hero-scrim"></div>
     </div>
     <div class="wrap-wide hero-content">
@@ -486,26 +505,38 @@
       <ul class="press-list">
         <li>
           <a href="https://www.wmra.org/2025-09-23/staunton-group-supports-families-of-incarcerated-with-love-forward" rel="noopener noreferrer" target="_blank">
-            <span class="outlet">WMRA</span>
-            Staunton group supports families of the incarcerated with Love Forward
+            <img class="press-thumb" src="assets/press-wmra.jpg" alt="" width="480" height="270" loading="lazy" />
+            <span class="press-copy">
+              <span class="outlet">WMRA</span>
+              <span class="press-headline">Staunton group supports families of the incarcerated with Love Forward</span>
+            </span>
           </a>
         </li>
         <li>
           <a href="https://www.newsleader.com/story/news/local/2025/01/08/newsmaker-2024-keisha-nicholson-and-the-love-forward-foundation/77066731007/" rel="noopener noreferrer" target="_blank">
-            <span class="outlet">News Leader</span>
-            Newsmaker 2024: Keisha Nicholson and the Love Forward Foundation
+            <img class="press-thumb" src="assets/press-newsleader.jpg" alt="" width="480" height="270" loading="lazy" />
+            <span class="press-copy">
+              <span class="outlet">News Leader</span>
+              <span class="press-headline">Newsmaker 2024: Keisha Nicholson and the Love Forward Foundation</span>
+            </span>
           </a>
         </li>
         <li>
           <a href="https://www.whsv.com/2024/08/02/love-forward-foundation-host-creative-haven-workshops-at-risk-youth/" rel="noopener noreferrer" target="_blank">
-            <span class="outlet">WHSV</span>
-            Creative Haven workshops for at-risk youth
+            <img class="press-thumb" src="assets/press-whsv-creative.jpg" alt="" width="480" height="270" loading="lazy" />
+            <span class="press-copy">
+              <span class="outlet">WHSV</span>
+              <span class="press-headline">Creative Haven workshops for at-risk youth</span>
+            </span>
           </a>
         </li>
         <li>
           <a href="https://www.whsv.com/2025/04/17/love-forward-foundation-host-community-event-celebrating-10-years-impact/" rel="noopener noreferrer" target="_blank">
-            <span class="outlet">WHSV</span>
-            Comm(UNITY) Kickback — celebrating years of impact
+            <img class="press-thumb" src="assets/press-whsv-kickback.jpg" alt="" width="480" height="270" loading="lazy" />
+            <span class="press-copy">
+              <span class="outlet">WHSV</span>
+              <span class="press-headline">Comm(UNITY) Kickback — celebrating years of impact</span>
+            </span>
           </a>
         </li>
       </ul>
