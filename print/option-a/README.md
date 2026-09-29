@@ -1,36 +1,53 @@
 # Love Forward Foundation — Option A print package
 
-Client-locked business card (**Option A: stacked contact front**). Source art: `assets/option-a-front.png`, `assets/option-a-back.png`.
+Client-locked business card (**Option A: stacked contact front**). Conforms to [printer business card template](https://splus-prod-phoenix-site-assets.pnimedia.com/dynamic/Content/documents/Category/Templates/en-us/BusinessCards/template.pdf) (trim 3.5" × 2", bleed page 3.75" × 2.25" / 270×162 pt, safety 3.25" × 1.75").
 
-## Files
+Source art: `assets/option-a-front.png`, `assets/option-a-back.png`.
+
+## Which file to send the printer
+
+| File | When to use |
+|------|-------------|
+| **`love-forward-option-a-print.pdf`** | **Default / primary.** Trim 3.5" × 2", 2 pages (front contact + QR, back logo). Matches client mock — **no bleed**. |
+| **`love-forward-option-a-print-bleed.pdf`** | Use when printer requires supplied bleed. Page exactly **3.75" × 2.25"** (270×162 pt), **no crop marks**, no extra margin. `TrimBox` = inner 3.5" × 2"; `BleedBox` = full page. Bleed built by extending edge pixels. |
+
+## Safety-line verification (300 DPI trim canvas)
+
+Measured content margins inside the **3.25" × 1.75" safety box** (75 px inset from trim). Background bars/rails excluded.
+
+| Side | Left | Top | Right | Bottom | Content bbox (px) |
+|------|------|-----|-------|--------|-------------------|
+| **Front** | 0 | 88 | 0 | 67 | 75, 163 → 974, 457 |
+| **Back** | 69 | 35 | 69 | 35 | 144, 110 → 905, 489 |
+
+Overlay previews (magenta = trim, cyan = safety): `previews/safety-overlay-front.png`, `previews/safety-overlay-back.png`.
+
+Front layout tweak: contact block shifted +15 px right, QR shifted −2 px left; left red rail unchanged (bleeds to trim edge).
+
+## Thin bar risk (back)
+
+Top/bottom red bars are ~11 px / ~10 px tall (~**0.037"** at trim) and sit **on the trim edge**. Background art is correct per client mock, but cutter tolerance (often ±1/16" or more) can make one bar look slightly thicker/thinner or clip a hairline. Flag to the printer that edge bars are intentional full-bleed graphics.
+
+## Other files
 
 | File | Description |
 |------|-------------|
-| `love-forward-option-a-print.pdf` | **Send this** — 2 pages: page 1 = front (contact + QR), page 2 = back (logo) |
-| `option-a-front.pdf` | Front only (with bleed) |
-| `option-a-back.pdf` | Back only (with bleed) |
-| `option-a-front-trim-300dpi.png` | Front at trim size, 300 DPI |
-| `option-a-back-trim-300dpi.png` | Back at trim size, 300 DPI |
-| `option-a-front-bleed-300dpi.png` | Front with bleed, 300 DPI |
-| `option-a-back-bleed-300dpi.png` | Back with bleed, 300 DPI |
+| `previews/trim-page-*.png` | Trim PDF page previews |
+| `previews/bleed-page-*.png` | Bleed artboard previews |
+| `option-a-*-trim-300dpi.png` / `*-bleed-300dpi.png` | Individual sides |
+| `safety-margins.json` | Machine-readable margin report |
+| `build_print_package.py` | Regenerate all outputs |
 
-## Specs for printer
+## Specs
 
 | Setting | Value |
 |---------|--------|
-| **Trim size** | 3.5" × 2" (US standard business card) |
-| **Bleed** | **Yes** — 0.125" on all sides (full artboard 3.75" × 2.25") |
-| **Sides** | 2 (front + back) |
-| **Pages** | 2 (one card side per page) |
-| **Resolution** | 300 DPI effective at trim (source art is 1050×600 px = 300 DPI at 3.5×2") |
-| **Color** | RGB (`#E82624` brand red, black, white). **Request CMYK conversion** at prepress if required. |
-| **QR code** | Points to https://loveforwardfoundation.org |
-
-### Bleed notes
-
-- White background extends cleanly into bleed on all sides.
-- **Front (contact):** left red bar and top/bottom corner rules extended into bleed.
-- **Back (logo):** top and bottom red rules extended into bleed.
+| **Trim** | 3.5" × 2" |
+| **Bleed (optional PDF)** | 0.125" all sides → 3.75" × 2.25" |
+| **Safety** | 3.25" × 1.75" (0.25" inset from trim) |
+| **Resolution** | 300 DPI at trim (1050×600 px) |
+| **Color** | RGB `#E82624`, black, white — request CMYK at prepress |
+| **QR** | https://loveforwardfoundation.org |
 
 ### Regenerating
 
@@ -38,4 +55,6 @@ Client-locked business card (**Option A: stacked contact front**). Source art: `
 python3 print/option-a/build_print_package.py
 ```
 
-Requires: `Pillow`, `reportlab` (`pip install Pillow reportlab`).
+Requires: `Pillow`, `reportlab`, `pypdf`, `numpy`.
+
+If `assets/option-a-front.png` is replaced with an unadjusted layout, re-apply the safety shift (see `fix_front_layout()` in `build_print_package.py`) before rebuilding.
