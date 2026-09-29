@@ -70,7 +70,7 @@ def add_bleed_contact_front(src: Image.Image) -> Image.Image:
 
 
 def add_bleed_logo_back(src: Image.Image) -> Image.Image:
-    """Logo side: extend top/bottom red rules into bleed."""
+    """Logo side: extend single top red rule into bleed."""
     src = src.convert("RGB")
     assert src.size == (TRIM_W_PX, TRIM_H_PX), src.size
 
@@ -79,11 +79,9 @@ def add_bleed_logo_back(src: Image.Image) -> Image.Image:
 
     for y in range(BLEED_T):
         for x in range(FULL_W_PX):
-            out.putpixel((x, y), BRAND_RED)
-
-    for y in range(FULL_H_PX - BLEED_B, FULL_H_PX):
-        for x in range(FULL_W_PX):
-            out.putpixel((x, y), BRAND_RED)
+            trim_x = x - BLEED_L
+            if 0 <= trim_x < TRIM_W_PX and src.getpixel((trim_x, 0)) == BRAND_RED:
+                out.putpixel((x, y), BRAND_RED)
 
     return out
 

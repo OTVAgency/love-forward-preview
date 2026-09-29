@@ -30,7 +30,7 @@ Client-locked business card (**Option A: stacked contact front**). Source art: `
 
 - White background extends cleanly into bleed on all sides.
 - **Front (contact):** left red bar and top/bottom corner rules extended into bleed.
-- **Back (logo):** top and bottom red rules extended into bleed.
+- **Back (logo):** single top red rule extended into bleed.
 
 ### Regenerating
 
