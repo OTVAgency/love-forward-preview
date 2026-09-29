@@ -2,35 +2,37 @@
 
 Client-locked business card (**Option A: stacked contact front**). Source art: `assets/option-a-front.png`, `assets/option-a-back.png`.
 
-## Files
+## Which file to send the printer
+
+| File | When to use |
+|------|-------------|
+| **`love-forward-option-a-print.pdf`** | **Default / primary.** Trim-size 3.5" × 2", 2 pages (front, back). Matches the client mock exactly — **no bleed**. Use when the printer adds their own bleed or accepts trim-only art. |
+| **`love-forward-option-a-print-bleed.pdf`** | Use when the printer requires supplied bleed. Artboard 3.75" × 2.25" (0.125" bleed) with **crop/trim marks** in the margin showing the 3.5" × 2" cut line. Bleed is built by extending edge pixels only (red bars stay thin at trim). |
+
+## Other files
 
 | File | Description |
 |------|-------------|
-| `love-forward-option-a-print.pdf` | **Send this** — 2 pages: page 1 = front (contact + QR), page 2 = back (logo) |
-| `option-a-front.pdf` | Front only (with bleed) |
-| `option-a-back.pdf` | Back only (with bleed) |
-| `option-a-front-trim-300dpi.png` | Front at trim size, 300 DPI |
-| `option-a-back-trim-300dpi.png` | Back at trim size, 300 DPI |
-| `option-a-front-bleed-300dpi.png` | Front with bleed, 300 DPI |
-| `option-a-back-bleed-300dpi.png` | Back with bleed, 300 DPI |
+| `previews/trim-page-*.png` | Page previews of the trim PDF (matches `assets/*.png`) |
+| `previews/bleed-page-*.png` | Page previews of the bleed PDF (includes crop marks) |
+| `option-a-*-trim-300dpi.png` | Individual sides at trim size, 300 DPI |
+| `option-a-*-bleed-300dpi.png` | Individual sides with bleed artboard, 300 DPI |
 
 ## Specs for printer
 
 | Setting | Value |
 |---------|--------|
 | **Trim size** | 3.5" × 2" (US standard business card) |
-| **Bleed** | **Yes** — 0.125" on all sides (full artboard 3.75" × 2.25") |
+| **Bleed (optional file)** | 0.125" on all sides → 3.75" × 2.25" artboard |
 | **Sides** | 2 (front + back) |
 | **Pages** | 2 (one card side per page) |
-| **Resolution** | 300 DPI effective at trim (source art is 1050×600 px = 300 DPI at 3.5×2") |
+| **Resolution** | 300 DPI at trim (source art is 1050×600 px) |
 | **Color** | RGB (`#E82624` brand red, black, white). **Request CMYK conversion** at prepress if required. |
 | **QR code** | Points to https://loveforwardfoundation.org |
 
-### Bleed notes
+### Back art (logo side)
 
-- White background extends cleanly into bleed on all sides.
-- **Front (contact):** left red bar and top/bottom corner rules extended into bleed.
-- **Back (logo):** single top red rule extended into bleed.
+Two thin red bars at **top and bottom** (matches client mock on `assets/option-a-back.png`).
 
 ### Regenerating
 
@@ -38,4 +40,4 @@ Client-locked business card (**Option A: stacked contact front**). Source art: `
 python3 print/option-a/build_print_package.py
 ```
 
-Requires: `Pillow`, `reportlab` (`pip install Pillow reportlab`).
+Requires: `Pillow`, `reportlab`, `pypdf` (`pip install Pillow reportlab pypdf`).
