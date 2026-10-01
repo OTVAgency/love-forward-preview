@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Love Forward Foundation — Stop Stigma. Create Change. Love Forward.</title>
-<meta name="description" content="Love Forward Foundation — statewide support for families living the shared sentence of incarceration." />
+<meta name="description" content="Love Forward Foundation — support for families navigating parental incarceration, especially those living the shared sentence on the outside." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -141,7 +141,7 @@
     }
   }
   @media (max-width: 899px) {
-    .hero h1 { max-width: 22ch; }
+    .hero h1 { max-width: none; }
     .hero .mission {
       font-size: 0.98rem;
       margin-bottom: 1.15rem;
@@ -154,9 +154,19 @@
     color: var(--red); margin-bottom: 0.85rem;
   }
   .hero h1 {
-    font-size: clamp(2rem, 5.5vw, 3.35rem);
-    font-weight: 800; max-width: 16ch;
+    font-size: clamp(1.65rem, 4.8vw, 2.85rem);
+    font-weight: 800; max-width: 22ch;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  .hero-prompt {
+    font-family: "League Spartan", sans-serif;
+    font-size: clamp(1.05rem, 2.6vw, 1.35rem);
+    font-weight: 600;
     margin-bottom: 0.85rem;
+    color: rgba(255,255,255, 0.95);
+    max-width: 28rem;
   }
   .tagline-line {
     font-family: "League Spartan", sans-serif;
@@ -226,6 +236,32 @@
     font-size: 1.15rem; font-weight: 700; margin-bottom: 0.45rem;
   }
   .card p { color: var(--muted); font-size: 0.98rem; }
+  .status-tag {
+    display: inline-block;
+    margin-bottom: 0.55rem;
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--red); background: rgba(232, 38, 36, 0.08);
+    border: 1px solid rgba(232, 38, 36, 0.35);
+    border-radius: 999px; padding: 0.3rem 0.65rem;
+  }
+  .band .status-tag { background: rgba(232, 38, 36, 0.06); }
+  .recognition-feature {
+    background: var(--white);
+    border: 2px solid var(--red);
+    border-radius: 1rem;
+    padding: 1.35rem 1.25rem;
+    margin-bottom: 1.35rem;
+  }
+  .recognition-feature h3 {
+    font-size: 1.15rem; font-weight: 800; margin-bottom: 0.5rem;
+  }
+  .recognition-feature p { color: var(--muted); font-size: 0.98rem; }
+  .recognition-feature .when {
+    display: block; margin-top: 0.65rem;
+    font-size: 0.82rem; font-weight: 600; color: var(--black);
+  }
 
   .split {
     display: grid; gap: 1.75rem; align-items: center;
@@ -388,7 +424,7 @@
         <span>Love Forward Foundation</span>
       </a>
       <div class="nav-links">
-        <a href="#what-we-do">What we do</a>
+        <a href="#what-we-do">What we're building</a>
         <a href="#project-seen">Project SEEN</a>
         <a href="#about">About</a>
         <a href="../media-kit/">Media Kit</a>
@@ -405,9 +441,10 @@
     </div>
     <div class="wrap-wide hero-content">
       <p class="eyebrow">Families Serve Sentences Too™</p>
-      <h1>Love that moves families forward.</h1>
+      <h1>Your family doesn't have to navigate this alone.</h1>
+      <p class="hero-prompt">What do you need help with today?</p>
       <p class="tagline-line"><span class="r">STOP</span> Stigma. <span class="r">CREATE</span> Change. <span class="r">LOVE</span> Forward.</p>
-      <p class="mission">Statewide support for caregivers, youth, and adult children living the shared sentence of incarceration.</p>
+      <p class="mission">Love Forward Foundation exists for families navigating parental incarceration — especially children, adult children, caregivers, households, schools, workplaces, churches, and communities living the consequences on the outside of the sentence.</p>
       <div class="ctas">
         <a class="btn" href="mailto:info@loveforwardfoundation.org">Get in touch</a>
         <a class="btn btn-secondary" href="../media-kit/">View media kit</a>
@@ -419,20 +456,19 @@
 
   <section class="band" id="what-we-do">
     <div class="wrap-wide">
-      <p class="section-label">What we do</p>
-      <h2>Three pillars. One movement.</h2>
-      <div class="card-grid three">
+      <p class="section-label">What we're building</p>
+      <h2>Two pillars. One movement.</h2>
+      <p class="lede">Major areas Love Forward Foundation is developing to support families affected by parental incarceration — practical infrastructure, not a traditional resource directory alone.</p>
+      <div class="card-grid two">
         <article class="card card-accent">
-          <h3>Advocacy &amp; Awareness</h3>
-          <p>Make justice-impacted families visible — especially in rural Virginia.</p>
+          <span class="status-tag">In development</span>
+          <h3>Family Stability Portal</h3>
+          <p>An interactive digital family-stability navigation system created specifically for families impacted by parental incarceration. Unlike a traditional resource directory that asks &ldquo;What organization or service are you looking for?&rdquo;, it begins with: &ldquo;What is happening with your family right now?&rdquo; Families are guided from their situation to identified needs, tailored pathways, practical tools and downloadable resources, with outside connections when needed. The goal is for families to leave with something useful even when a referral is not necessary.</p>
         </article>
         <article class="card card-accent">
-          <h3>Connection &amp; Support</h3>
-          <p>Workshops, creative coping, and pathways so families feel seen and less alone.</p>
-        </article>
-        <article class="card card-accent">
-          <h3>Ecosystem Building</h3>
-          <p>Reentry and community care that includes families on the outside.</p>
+          <span class="status-tag">Coming</span>
+          <h3>The Shared Sentence Experience</h3>
+          <p>Love Forward Foundation's signature experiential and educational framework centered on the impact of parental incarceration on the family members serving the sentence on the outside. It is being developed to include caregiver and age-specific child perspectives (elementary, middle school, high school, and adult children of incarcerated or formerly incarcerated parents). The annual experience will bring together simulation, family storytelling, an archival/art gallery, education, resource navigation, community partners, and lived experience.</p>
         </article>
       </div>
     </div>
@@ -441,8 +477,8 @@
   <section class="band-dark" id="project-seen">
     <div class="wrap">
       <p class="section-label">Featured initiative</p>
-      <h2>Project SEEN</h2>
-      <p class="lede" style="margin-bottom:1.35rem;"><strong style="color:#fff;">Seeing the Needs of Children and Caregivers Impacted by Parental Incarceration.</strong> Pathways to identify, support, and connect families to resources and relationships. Supported by the Waynesboro Kiwanis Club.</p>
+      <h2>Project SEEN: Seeing the Needs of Children and Caregivers Impacted by Parental Incarceration</h2>
+      <p class="lede" style="margin-bottom:1.35rem;">Project SEEN focuses on identifying and responding to the needs of children and caregivers impacted by parental incarceration, particularly families who may never formally disclose what they are experiencing. The work includes family tools and resources, community education, access support, school and community partnerships, and the continued development of pathways that allow families to find help without being forced to identify themselves publicly. Project SEEN helps support the larger family-stability infrastructure being built. Supported by the Waynesboro Kiwanis Club.</p>
       <a class="btn" href="mailto:info@loveforwardfoundation.org?subject=Project%20SEEN">Ask about Project SEEN</a>
     </div>
   </section>
@@ -454,9 +490,9 @@
           <p class="section-label">About</p>
           <h2>Founded in lived experience</h2>
           <div class="card card-accent">
-            <h3>Keisha Nicholson</h3>
+            <h3>Keisha M. Nicholson</h3>
             <p style="margin-bottom:0.55rem;"><strong>Founder &amp; Executive Director</strong></p>
-            <p>Rooted in parental incarceration — from pen pals and care packages to Creative Haven in Staunton and statewide family outreach.</p>
+            <p>Keisha M. Nicholson founded Love Forward Foundation in 2015 from lived experience and a simple understanding: when a parent is incarcerated, the sentence reaches far beyond the person in custody. Over the past decade, she has grown Love Forward Foundation through community relationships, lived experience, partnerships, and a commitment to making families affected by parental incarceration more visible. Today, her work focuses on building practical family-stability infrastructure, strengthening community understanding of parental incarceration, and developing tools that help children, adult children, caregivers, and families navigate the shared sentence. Her leadership continues to shape Love Forward Foundation's core belief: Families Serve Sentences Too.™</p>
           </div>
         </div>
         <div class="media">
@@ -485,24 +521,20 @@
 
   <section class="band" id="programs">
     <div class="wrap-wide">
-      <p class="section-label">Programs &amp; gathering spaces</p>
-      <h2>How families show up with us</h2>
+      <p class="section-label">Our roots</p>
+      <h2>Creative Haven &amp; community connection</h2>
+      <article class="card card-accent" style="margin-bottom:1.5rem;">
+        <h3>Creative Haven</h3>
+        <p>Creative Haven is an important part of Love Forward Foundation's history. It helped establish the community-based approach and demonstrated the importance of creating safe spaces for families. The work has now evolved toward building sustainable family-stability infrastructure through the Family Stability Portal and The Shared Sentence Experience.</p>
+      </article>
       <div class="card-grid two" style="margin-bottom:1.5rem;">
         <article class="card">
-          <h3>Creative Haven</h3>
-          <p>Art, hair, writing, music, and youth markets — creative coping for families.</p>
-        </article>
-        <article class="card">
           <h3>Rituals &amp; Ritual Guide</h3>
-          <p>Pick a Truth, Write + Release, Ground with a Heart, Tie a Thread, and more.</p>
+          <p>Pick a Truth, Write + Release, Ground with a Heart, Tie a Thread, and more — tools that meet families where they are.</p>
         </article>
         <article class="card">
           <h3>Community events</h3>
-          <p>Create &amp; Skate, Comm(UNITY) Kickback, and school &amp; facility outreach.</p>
-        </article>
-        <article class="card">
-          <h3>Family Support Resources</h3>
-          <p>Hub for families walking incarceration and reentry.</p>
+          <p>Create &amp; Skate, Comm(UNITY) Kickback, and school &amp; community outreach that keep families connected and visible.</p>
         </article>
       </div>
       <figure class="program-banner">
@@ -536,8 +568,15 @@
 
   <section class="band">
     <div class="wrap">
-      <p class="section-label">As seen in</p>
-      <h2>Press</h2>
+      <p class="section-label">Recognition &amp; press</p>
+      <h2>In the news</h2>
+      <div class="recognition-feature">
+        <p class="section-label" style="margin-bottom:0.35rem;">2026 FACT Champions</p>
+        <h3>Pay It Forward Award — $10,000</h3>
+        <p>Love Forward Foundation was selected to receive a $10,000 Pay It Forward Award as part of the Family and Children's Trust Fund (FACT) of Virginia's 40th Anniversary FACT Champions initiative. Selected by Champion for Children Charlé McCauley in recognition of its work supporting children, caregivers, and families impacted by parental incarceration.</p>
+        <span class="when">Recognized October 1, 2026 · FACT of Virginia 40th Anniversary Celebration · Virginia Museum of History &amp; Culture, Richmond</span>
+      </div>
+      <p class="section-label" style="margin-top:0.5rem;">As seen in</p>
       <ul class="press-list">
         <li>
           <a href="https://www.wmra.org/2025-09-23/staunton-group-supports-families-of-incarcerated-with-love-forward" rel="noopener noreferrer" target="_blank">

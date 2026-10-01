@@ -27,6 +27,7 @@
     background: #e8e8e8;
     line-height: 1.55;
     font-size: 16px;
+    overflow-x: hidden;
   }
   h1, h2, h3, h4, .display {
     font-family: "League Spartan", system-ui, sans-serif;
@@ -59,6 +60,7 @@
     position: sticky; top: 52px; z-index: 90;
     background: var(--white); border-bottom: 2px solid var(--black);
     overflow-x: auto; -webkit-overflow-scrolling: touch;
+    max-width: 100%;
   }
   .kit-nav-inner {
     max-width: var(--page-max); margin: 0 auto;
@@ -340,6 +342,21 @@
     font-family: "League Spartan", sans-serif;
     letter-spacing: 0.04em; text-transform: uppercase;
   }
+  .status-tag {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--red); background: rgba(232, 38, 36, 0.08);
+    border: 1px solid rgba(232, 38, 36, 0.35);
+    border-radius: 999px; padding: 4px 10px;
+  }
+  .press-list li.featured {
+    border: 2px solid var(--red);
+    background: #fff8f7;
+  }
+  html { overflow-x: hidden; }
 </style>
 </head>
 <body>
@@ -386,10 +403,10 @@
         </div>
         <div class="cover-panel">
           <h2>Families Serve Sentences Too™</h2>
-          <p>A statewide, dignity-centered movement supporting caregivers, youth, and adult children living the shared sentence of incarceration.</p>
+          <p>A statewide, dignity-centered movement supporting caregivers, youth, and adult children living the shared sentence of parental incarceration — especially those experiencing the consequences on the outside of the sentence.</p>
           <a class="btn" href="#contents">Explore the kit</a>
           <div class="meta">
-            Keisha Nicholson · Founder &amp; Executive Director<br />
+            Keisha M. Nicholson · Founder &amp; Executive Director<br />
             Shenandoah Valley / Virginia · Est. grassroots ~2015 · 501(c)(3) since 2017
           </div>
         </div>
@@ -432,7 +449,7 @@
     <div class="page-inner">
       <p class="kicker">Who we are</p>
       <h2 class="page-title">About Love Forward</h2>
-      <p class="page-sub">A family-focused, caregiver-centered movement supporting families living the shared sentence of incarceration.</p>
+      <p class="page-sub">A family-focused, caregiver-centered movement supporting families living the shared sentence of parental incarceration.</p>
 
       <div class="split-photo">
         <div>
@@ -443,16 +460,16 @@
         </div>
         <div>
           <h3 style="font-size:1.35rem; margin-bottom:12px;">Mission</h3>
-          <p style="margin-bottom:16px;">A statewide movement supporting caregivers, youth, and adult children living the shared sentence of incarceration — centering dignity, belonging, and the lived experience of families carrying that sentence on the outside.</p>
+          <p style="margin-bottom:16px;">A statewide movement supporting caregivers, youth, and adult children living the shared sentence of parental incarceration — centering dignity, belonging, and the lived experience of families carrying that sentence on the outside.</p>
 
           <h3 style="font-size:1.15rem; margin:20px 0 10px;">Families Serve Sentences Too™</h3>
-          <p style="margin-bottom:16px; color:#333;">When a parent is incarcerated, families serve the sentence too. Love Forward builds pathways so those families are seen, supported, and connected to resources, relationships, and opportunities.</p>
+          <p style="margin-bottom:16px; color:#333;">When a parent is incarcerated, families serve the sentence too. Love Forward builds pathways so children, adult children, caregivers, households, schools, workplaces, churches, and communities affected by parental incarceration are seen, supported, and connected to resources, relationships, and opportunities.</p>
 
           <ul class="values-list">
-            <li><span class="dot"></span><div><strong>Visibility</strong> — families impacted by incarceration deserve to be seen</div></li>
+            <li><span class="dot"></span><div><strong>Visibility</strong> — families impacted by parental incarceration deserve to be seen</div></li>
             <li><span class="dot"></span><div><strong>Dignity</strong> — healing-centered, trauma-informed care without stigma</div></li>
             <li><span class="dot"></span><div><strong>Connection</strong> — community rituals, workshops, and support spaces</div></li>
-            <li><span class="dot"></span><div><strong>Community Care</strong> — ecosystem building across caregivers and partners</div></li>
+            <li><span class="dot"></span><div><strong>Community Care</strong> — building understanding and support across caregivers, schools, and partners</div></li>
             <li><span class="dot"></span><div><strong>Lived Experience Leadership</strong> — led by those who know the journey</div></li>
           </ul>
         </div>
@@ -470,7 +487,7 @@
     <div class="page-inner">
       <p class="kicker">Leadership</p>
       <h2 class="page-title">Founder</h2>
-      <p class="page-sub">Keisha Nicholson — Founder &amp; Executive Director</p>
+      <p class="page-sub">Keisha M. Nicholson — Founder &amp; Executive Director</p>
 
       <div class="split-photo">
         <div>
@@ -480,18 +497,12 @@
           <p class="photo-cap">Speaking engagement — InsideOut Dads guest appearance.</p>
         </div>
         <div>
-          <h3 style="font-size:1.5rem; margin-bottom:4px;">Keisha Nicholson</h3>
+          <h3 style="font-size:1.5rem; margin-bottom:4px;">Keisha M. Nicholson</h3>
           <p style="color:var(--red); font-family:'League Spartan',sans-serif; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; font-size:0.85rem; margin-bottom:16px;">Founder &amp; Executive Director</p>
 
-          <p style="margin-bottom:14px;">Keisha founded Love Forward from lived experience of parental incarceration — early work rooted in pen-pal relationships and care packages during visitation years, growing into a justice-rooted nonprofit serving the Shenandoah Valley and Virginia families.</p>
-          <p style="margin-bottom:14px;">A movement architect, impacted artist, and narrative strategist, she protects and elevates the stories of justice-impacted families — especially in rural communities — so emotional truth is honored, not hidden.</p>
-          <p style="margin-bottom:18px;">Under her leadership the foundation has built Creative Haven workshops, community rituals, school and facility outreach, and initiatives like <strong>Project SEEN</strong> — seeing the needs of children and caregivers impacted by parental incarceration.</p>
-
-          <div class="quote-mark">“</div>
-          <blockquote class="pull">
-            We aim to foster resilience through self-reliance.
-            <cite>Keisha Nicholson · cited News Leader Newsmaker 2024</cite>
-          </blockquote>
+          <p style="margin-bottom:14px;">Keisha M. Nicholson founded Love Forward Foundation in 2015 from lived experience and a simple understanding: when a parent is incarcerated, the sentence reaches far beyond the person in custody. Over the past decade, she has grown Love Forward Foundation through community relationships, lived experience, partnerships, and a commitment to making families affected by parental incarceration more visible.</p>
+          <p style="margin-bottom:14px;">Today, her work focuses on building practical family-stability infrastructure, strengthening community understanding of parental incarceration, and developing tools that help children, adult children, caregivers, and families navigate the shared sentence.</p>
+          <p style="margin-bottom:18px;">Her leadership continues to shape Love Forward Foundation's core belief: Families Serve Sentences Too.™</p>
 
           <div class="pill-row" style="margin-top:20px;">
             <span class="pill">Speaker</span>
@@ -514,34 +525,32 @@
     <div class="page-inner">
       <p class="kicker">What we do</p>
       <h2 class="page-title">Programs &amp; impact</h2>
-      <p class="page-sub">Verified pillars from the 2026 brochure and public press — qualitative impact only; no invented headcounts.</p>
+      <p class="page-sub">What Love Forward Foundation is building for families affected by parental incarceration — plus featured initiative and community roots.</p>
 
-      <div class="grid-3" style="margin-bottom:24px;">
+      <h3 style="font-size:1.25rem; margin-bottom:14px;">Two pillars · in development</h3>
+      <div class="grid-2" style="margin-bottom:24px;">
         <div class="card">
-          <h3>Advocacy &amp; Awareness</h3>
-          <p>Statewide storytelling that names the shared sentence, reduces stigma, and invites communities to see families impacted by incarceration.</p>
+          <span class="status-tag">In development</span>
+          <h3>Family Stability Portal</h3>
+          <p>An interactive digital family-stability navigation system created specifically for families impacted by parental incarceration. Unlike a traditional resource directory that asks &ldquo;What organization or service are you looking for?&rdquo;, it begins with: &ldquo;What is happening with your family right now?&rdquo; Families are guided from their situation to identified needs, tailored pathways, practical tools and downloadable resources, with outside connections when needed. The goal is for families to leave with something useful even when a referral is not necessary.</p>
         </div>
         <div class="card">
-          <h3>Connection &amp; Support</h3>
-          <p>Creative coping workshops, caregiver spaces, rituals, and pathways that help families feel seen, supported, and connected.</p>
-        </div>
-        <div class="card">
-          <h3>Ecosystem Building</h3>
-          <p>Partners, schools, facilities, and community events that strengthen reentry ecosystems by including families on the outside.</p>
+          <span class="status-tag">Coming</span>
+          <h3>The Shared Sentence Experience</h3>
+          <p>Love Forward Foundation's signature experiential and educational framework centered on the impact of parental incarceration on the family members serving the sentence on the outside. It is being developed to include caregiver and age-specific child perspectives (elementary, middle school, high school, and adult children of incarcerated or formerly incarcerated parents). The annual experience will bring together simulation, family storytelling, an archival/art gallery, education, resource navigation, community partners, and lived experience.</p>
         </div>
       </div>
 
-      <h3 style="font-size:1.25rem; margin-bottom:14px;">Featured work</h3>
+      <h3 style="font-size:1.25rem; margin-bottom:14px;">Featured initiative</h3>
       <div class="grid-2" style="margin-bottom:24px;">
-        <div class="card dark">
-          <h3>Project SEEN</h3>
-          <p><em>Seeing the Needs of Children and Caregivers Impacted by Parental Incarceration.</em> Building stronger pathways to identify, support, and connect families to resources, relationships, and opportunities — because families serving a shared sentence deserve to be seen.</p>
-          <p style="margin-top:10px; font-size:0.8rem; color:#999;">Source: Love Forward Facebook · Sep 2026 · Waynesboro Kiwanis Club grant support</p>
+        <div class="card dark" style="grid-column: 1 / -1;">
+          <h3>Project SEEN: Seeing the Needs of Children and Caregivers Impacted by Parental Incarceration</h3>
+          <p>Project SEEN focuses on identifying and responding to the needs of children and caregivers impacted by parental incarceration, particularly families who may never formally disclose what they are experiencing. The work includes family tools and resources, community education, access support, school and community partnerships, and the continued development of pathways that allow families to find help without being forced to identify themselves publicly. Project SEEN helps support the larger family-stability infrastructure being built.</p>
+          <p style="margin-top:10px; font-size:0.8rem; color:#999;">Waynesboro Kiwanis Club grant support · Love Forward Facebook · Sep 2026</p>
         </div>
-        <div class="card">
-          <h3>Creative Haven</h3>
-          <p>Creative-coping space and workshop model — art, hair, writing, candles, jewelry, music, rug tufting, and youth markets — meeting families with hands-on healing and belonging. Direction includes mobile outreach to meet families where they are.</p>
-          <p style="margin-top:10px; font-size:0.8rem; color:var(--gray);">Coverage: WMRA, WHSV, News Leader · address / mobile status confirm with Cory before public location claims</p>
+        <div class="card" style="grid-column: 1 / -1;">
+          <h3>Creative Haven · history</h3>
+          <p>Creative Haven is an important part of Love Forward Foundation's history. It helped establish the community-based approach and demonstrated the importance of creating safe spaces for families. The work has now evolved toward building sustainable family-stability infrastructure through the Family Stability Portal and The Shared Sentence Experience.</p>
         </div>
       </div>
 
@@ -563,14 +572,13 @@
       <h3 style="font-size:1.1rem; margin:18px 0 10px;">Also in the movement</h3>
       <div class="pill-row">
         <span class="pill outline">Ritual Guide · Rituals</span>
-        <span class="pill outline">Family Support Resources</span>
         <span class="pill outline">Comm(UNITY) Kickback</span>
-        <span class="pill outline">School &amp; facility outreach</span>
+        <span class="pill outline">School &amp; community outreach</span>
         <span class="pill outline">Community awareness events</span>
       </div>
 
       <div class="note-box">
-        <strong>Cory hold:</strong> Impact numbers, current Creative Haven address vs mobile unit, and upcoming events calendar need confirmation before client send. National brochure stats omitted until approved.
+        <strong>Cory hold:</strong> Impact numbers and upcoming events calendar need confirmation before client send. National brochure stats omitted until approved.
       </div>
 
       <div class="page-footer">
@@ -611,7 +619,7 @@
           <h3 style="margin-bottom:10px;">Goals (brochure)</h3>
           <ul class="values-list">
             <li><span class="dot"></span><div>Families feel seen, supported, and connected</div></li>
-            <li><span class="dot"></span><div>Strengthen reentry ecosystems by including families</div></li>
+            <li><span class="dot"></span><div>Strengthen community understanding and support for families on the outside of the sentence</div></li>
             <li><span class="dot"></span><div>Statewide awareness of the shared sentence</div></li>
             <li><span class="dot"></span><div>Community for caregivers and adult children</div></li>
           </ul>
@@ -624,7 +632,7 @@
           <p style="margin-top:16px; font-size:0.95rem; color:#333;">
             Taglines in circulation: <em>STOP Stigma. CREATE Change. LOVE Forward.</em> ·
             <em>Families Serve Sentences Too™</em> ·
-            <em>Supporting Families Impacted by Incarceration</em> ·
+            <em>Supporting Families Impacted by Parental Incarceration</em> ·
             <em>Imagine Healing</em>
           </p>
         </div>
@@ -741,7 +749,7 @@
         </div>
         <div class="card">
           <h3>Press &amp; podcasts</h3>
-          <p>Interviews, features, and radio/podcast appearances that elevate justice-impacted families without exploitation. Assets and talking points available on request.</p>
+          <p>Interviews, features, and radio/podcast appearances that elevate families affected by parental incarceration without exploitation. Assets and talking points available on request.</p>
         </div>
         <div class="card">
           <h3>Community partners</h3>
@@ -753,8 +761,13 @@
         </div>
       </div>
 
-      <h3 style="margin-bottom:12px;">As seen in / featured</h3>
+      <h3 style="margin-bottom:12px;">Recognition &amp; as seen in</h3>
       <ul class="press-list">
+        <li class="featured">
+          <span class="outlet">2026 FACT Champions · Pay It Forward Award</span>
+          <span class="desc">Love Forward Foundation received a $10,000 Pay It Forward Award as part of FACT of Virginia's 40th Anniversary FACT Champions initiative — selected by Champion for Children Charlé McCauley for work supporting children, caregivers, and families impacted by parental incarceration.</span>
+          <span class="when">October 1, 2026 · Virginia Museum of History &amp; Culture, Richmond</span>
+        </li>
         <li>
           <span class="outlet">WMRA</span>
           <span class="desc">Staunton group supports families of incarcerated with Love Forward — Creative Haven origin, Create &amp; Skate.</span>
@@ -797,7 +810,7 @@
 
       <div class="grid-2">
         <div class="contact-stack">
-          <h3>Keisha Nicholson</h3>
+          <h3>Keisha M. Nicholson</h3>
           <p style="color:#aaa; margin-bottom:16px; font-size:0.9rem;">Founder &amp; Executive Director · Love Forward Foundation</p>
           <div class="contact-line"><span class="lbl">Email</span><a href="mailto:info@loveforwardfoundation.org">info@loveforwardfoundation.org</a></div>
           <div class="contact-line"><span class="lbl">Phone</span><a href="tel:5402525291">540-252-5291</a></div>
