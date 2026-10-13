@@ -41,7 +41,7 @@
 
   /* Top nav */
   .kit-nav {
-    position: sticky; top: 52px; z-index: 90;
+    position: sticky; top: 0; z-index: 90;
     background: var(--white); border-bottom: 2px solid var(--black);
     overflow-x: auto; -webkit-overflow-scrolling: touch;
     max-width: 100%;
@@ -58,6 +58,8 @@
     text-decoration: none;
   }
   .kit-nav a:hover { background: var(--soft); text-decoration: none; color: var(--red); }
+  /* Hidden until client approves section nav — remove rule to restore (reset .page scroll-margin-top to 110px) */
+  .kit-nav { display: none !important; }
 
   .kit-wrap { max-width: var(--page-max); margin: 24px auto 64px; padding: 0 12px; }
 
@@ -69,7 +71,7 @@
     box-shadow: 0 8px 28px rgba(0,0,0,.08);
     min-height: min(100vh, 1100px);
     display: flex; flex-direction: column;
-    scroll-margin-top: 110px;
+    scroll-margin-top: 24px;
   }
   .page-inner { padding: var(--page-pad); flex: 1; display: flex; flex-direction: column; }
   .page-footer {
