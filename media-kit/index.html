@@ -187,6 +187,37 @@
   @media (max-width: 720px) {
     .grid-2, .grid-3 { grid-template-columns: 1fr; }
     .grid-5 { grid-template-columns: 1fr 1fr; }
+    #contact .grid-2 {
+      min-width: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+    #contact .grid-2 > * {
+      min-width: 0;
+      max-width: 100%;
+    }
+    #contact .contact-stack {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    #contact .contact-line {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+    #contact .contact-line .lbl {
+      min-width: 0;
+    }
+    #contact .contact-line a,
+    #contact .contact-line > span:not(.lbl) {
+      min-width: 0;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+    #contact .grid-2 > div > p {
+      overflow-wrap: anywhere;
+    }
   }
   .card {
     background: var(--soft); border-radius: 12px; padding: 20px;
